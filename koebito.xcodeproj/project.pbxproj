@@ -76,8 +76,8 @@
 		94FE1D7E1F1B7B62000A73FC /* koebitoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = koebitoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FE1D821F1B7B62000A73FC /* koebitoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koebitoUITests.swift; sourceTree = "<group>"; };
 		94FE1D841F1B7B62000A73FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KindCollectionViewCell.xib; path = ../KindCollectionViewCell.xib; sourceTree = "<group>"; };
-		94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KindCollectionViewCell.swift; path = ../KindCollectionViewCell.swift; sourceTree = "<group>"; };
+		94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindCollectionViewCell.xib; sourceTree = "<group>"; };
+		94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		94358AB21F1C4DC500A07E9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94358AB31F1C4DD500A07E9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94FE1D621F1B7B61000A73FC /* KindsViewController.swift */,
+				94FE1D641F1B7B61000A73FC /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		94FE1D541F1B7B61000A73FC = {
 			isa = PBXGroup;
 			children = (
@@ -142,10 +158,10 @@
 		94FE1D5F1F1B7B61000A73FC /* koebito */ = {
 			isa = PBXGroup;
 			children = (
+				94358AB31F1C4DD500A07E9C /* Controllers */,
+				94358AB21F1C4DC500A07E9C /* Model */,
 				94FE1D921F1B88C7000A73FC /* View */,
 				94FE1D601F1B7B61000A73FC /* AppDelegate.swift */,
-				94FE1D621F1B7B61000A73FC /* KindsViewController.swift */,
-				94FE1D641F1B7B61000A73FC /* SecondViewController.swift */,
 				94FE1D661F1B7B61000A73FC /* Main.storyboard */,
 				94FE1D691F1B7B61000A73FC /* Assets.xcassets */,
 				94FE1D6B1F1B7B61000A73FC /* LaunchScreen.storyboard */,
@@ -178,7 +194,7 @@
 				94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */,
 				94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
