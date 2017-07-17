@@ -12,9 +12,11 @@
 		94358A8D1F1BD0AC00A07E9C /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
 		94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		94358A941F1BD3F200A07E9C /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A931F1BD3F200A07E9C /* Hydra.framework */; };
-		94358A951F1BD3F200A07E9C /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A931F1BD3F200A07E9C /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */; };
+		94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */; };
+		94358AB91F1C7FF600A07E9C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB81F1C7FF600A07E9C /* Const.swift */; };
+		94358ABB1F1CA23700A07E9C /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358ABA1F1CA23700A07E9C /* Hydra.framework */; };
+		94358ABC1F1CA23700A07E9C /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358ABA1F1CA23700A07E9C /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D601F1B7B61000A73FC /* AppDelegate.swift */; };
 		94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D621F1B7B61000A73FC /* KindsViewController.swift */; };
 		94FE1D651F1B7B61000A73FC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D641F1B7B61000A73FC /* SecondViewController.swift */; };
@@ -53,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				94358A951F1BD3F200A07E9C /* Hydra.framework in Embed Frameworks */,
+				94358ABC1F1CA23700A07E9C /* Hydra.framework in Embed Frameworks */,
 				94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */,
 				94358A8D1F1BD0AC00A07E9C /* ObjectMapper.framework in Embed Frameworks */,
 			);
@@ -70,6 +72,9 @@
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		94358A931F1BD3F200A07E9C /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
+		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		94358ABA1F1CA23700A07E9C /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94FE1D5D1F1B7B61000A73FC /* koebito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koebito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FE1D601F1B7B61000A73FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94358A941F1BD3F200A07E9C /* Hydra.framework in Frameworks */,
 				94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */,
 				94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */,
 				AFA995AC39C77748479A4047 /* Pods_koebito.framework in Frameworks */,
+				94358ABB1F1CA23700A07E9C /* Hydra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				94FE1D621F1B7B61000A73FC /* KindsViewController.swift */,
+				94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */,
 				94FE1D641F1B7B61000A73FC /* SecondViewController.swift */,
 			);
 			path = Controllers;
@@ -157,6 +163,7 @@
 		94FE1D541F1B7B61000A73FC = {
 			isa = PBXGroup;
 			children = (
+				94358ABA1F1CA23700A07E9C /* Hydra.framework */,
 				94358A921F1BD0C100A07E9C /* Frameworks */,
 				94FE1D5F1F1B7B61000A73FC /* koebito */,
 				94FE1D761F1B7B62000A73FC /* koebitoTests */,
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */,
+				94358AB81F1C7FF600A07E9C /* Const.swift */,
 				94358AB31F1C4DD500A07E9C /* Controllers */,
 				94358AB21F1C4DC500A07E9C /* Model */,
 				94FE1D921F1B88C7000A73FC /* View */,
@@ -522,6 +530,8 @@
 				94FE1D651F1B7B61000A73FC /* SecondViewController.swift in Sources */,
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
+				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
+				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +691,7 @@
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -699,6 +710,7 @@
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

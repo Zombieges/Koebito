@@ -7,6 +7,7 @@ target 'koebito' do
 
   # Pods for koebito
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'koebitoTests' do
     inherit! :search_paths

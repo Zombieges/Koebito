@@ -17,6 +17,8 @@ class KindsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewFrameWidth = self.view.frame.size.width
+        
         // collectionViewSetting
         let nib = UINib(nibName: "KindCollectionViewCell", bundle: nil)
         self.kindsDetailCollectionView.register(nib, forCellWithReuseIdentifier: "KindCellIdentifier")
@@ -28,8 +30,11 @@ class KindsViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        // coolectionView の width、height を設定
-        self.kindsDetailCollectionView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width*1.7)
+        if let viewFrameWidth = viewFrameWidth,
+           let viewFrameHeight = viewFrameHeight {
+            // coolectionView の width、height を設定
+            self.kindsDetailCollectionView.frame = CGRect(x: 0, y: 0, width: viewFrameWidth, height: viewFrameHeight)
+        }
     }
 }
 
@@ -49,15 +54,18 @@ extension KindsViewController: UICollectionViewDataSource,
         imageView.image = cellImage
         imageView.sizeToFit()
         
-        //imageView.backgroundColor = UIColor.black
-        let position:CGFloat = self.view.frame.size.width/4-2
-        imageView.layer.position = CGPoint(x: position,y: position)
         
         // Tag番号を使ってLabelのインスタンス生成
         let label = KindCell.contentView.viewWithTag(2) as! UILabel
         label.text = kindsString[(indexPath as NSIndexPath).row]
         label.sizeToFit()
-        label.layer.position = CGPoint(x: position, y: position + 50.0)
+        
+        //imageView.backgroundColor = UIColor.black
+        if let displayIncellPosition = displayIncellPosition {
+            imageView.layer.position = CGPoint(x: displayIncellPosition,y: displayIncellPosition)
+            label.layer.position = CGPoint(x: displayIncellPosition, y: displayIncellPosition + 50.0)
+        }
+        
         
         // とりあえず適当に色をつけている（あとで変更する）
         KindCell.backgroundColor = UIColor(red: CGFloat(drand48()),
@@ -87,7 +95,9 @@ extension KindsViewController: UICollectionViewDelegateFlowLayout {
     // Screenサイズに応じたセルサイズを返す
     // UICollectionViewDelegateFlowLayoutの設定が必要
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGFloat = self.view.frame.size.width/2-1
+        guard let cellSize = cellSize else {
+            return CGSize(width: 0, height: 0)
+        }
         // 正方形で返すためにwidth,heightを同じにする
         return CGSize(width: cellSize, height: cellSize)
     }

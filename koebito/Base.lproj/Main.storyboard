@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-410.64467766116945"/>
         </scene>
-        <!--View Controller-->
+        <!--Kind Detail View Controller-->
         <scene sceneID="9x1-Qb-9OK">
             <objects>
-                <viewController id="pDL-If-mZd" sceneMemberID="viewController">
+                <viewController id="pDL-If-mZd" customClass="KindDetailViewController" customModule="koebito" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vhE-VD-ocA"/>
                         <viewControllerLayoutGuide type="bottom" id="Ybn-p6-IcG"/>
