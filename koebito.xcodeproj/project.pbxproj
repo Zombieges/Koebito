@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1834FEC285BA2AE96F5F6E74 /* Pods_koebitoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCECF4B2FCCA83BE79452EA /* Pods_koebitoTests.framework */; };
 		94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; };
 		94358A8D1F1BD0AC00A07E9C /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
 		94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358A941F1BD3F200A07E9C /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A931F1BD3F200A07E9C /* Hydra.framework */; };
 		94358A951F1BD3F200A07E9C /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A931F1BD3F200A07E9C /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */; };
 		94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D601F1B7B61000A73FC /* AppDelegate.swift */; };
 		94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D621F1B7B61000A73FC /* KindsViewController.swift */; };
 		94FE1D651F1B7B61000A73FC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D641F1B7B61000A73FC /* SecondViewController.swift */; };
@@ -23,6 +25,8 @@
 		94FE1D831F1B7B62000A73FC /* koebitoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D821F1B7B62000A73FC /* koebitoUITests.swift */; };
 		94FE1D941F1B8991000A73FC /* KindCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */; };
 		94FE1D9A1F1B8AAD000A73FC /* KindCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */; };
+		AFA995AC39C77748479A4047 /* Pods_koebito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC84D4BB38BA3D3D547B19B6 /* Pods_koebito.framework */; };
+		C4AB99C58F36507C7DE69488 /* Pods_koebitoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A8C335F1CB3F546BA81549 /* Pods_koebitoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +63,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests.release.xcconfig"; sourceTree = "<group>"; };
+		4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.release.xcconfig"; sourceTree = "<group>"; };
 		94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		94358A931F1BD3F200A07E9C /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
+		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94FE1D5D1F1B7B61000A73FC /* koebito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koebito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FE1D601F1B7B61000A73FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94FE1D621F1B7B61000A73FC /* KindsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +87,11 @@
 		94FE1D841F1B7B62000A73FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindCollectionViewCell.xib; sourceTree = "<group>"; };
 		94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DCECF4B2FCCA83BE79452EA /* Pods_koebitoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_koebitoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D1DC4C7BB66CAB2EBAEC54 /* Pods-koebito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.debug.xcconfig"; sourceTree = "<group>"; };
+		BC84D4BB38BA3D3D547B19B6 /* Pods_koebito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_koebito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF893600182208B36E14488 /* Pods-koebitoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5A8C335F1CB3F546BA81549 /* Pods_koebitoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_koebitoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 				94358A941F1BD3F200A07E9C /* Hydra.framework in Frameworks */,
 				94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */,
 				94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */,
+				AFA995AC39C77748479A4047 /* Pods_koebito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1834FEC285BA2AE96F5F6E74 /* Pods_koebitoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AB99C58F36507C7DE69488 /* Pods_koebitoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +131,9 @@
 				94358A931F1BD3F200A07E9C /* Hydra.framework */,
 				94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */,
 				94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */,
+				BC84D4BB38BA3D3D547B19B6 /* Pods_koebito.framework */,
+				9DCECF4B2FCCA83BE79452EA /* Pods_koebitoTests.framework */,
+				F5A8C335F1CB3F546BA81549 /* Pods_koebitoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +162,7 @@
 				94FE1D761F1B7B62000A73FC /* koebitoTests */,
 				94FE1D811F1B7B62000A73FC /* koebitoUITests */,
 				94FE1D5E1F1B7B61000A73FC /* Products */,
+				A1DB5F32BF6FE21AA3D162DF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +179,7 @@
 		94FE1D5F1F1B7B61000A73FC /* koebito */ = {
 			isa = PBXGroup;
 			children = (
+				94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */,
 				94358AB31F1C4DD500A07E9C /* Controllers */,
 				94358AB21F1C4DC500A07E9C /* Model */,
 				94FE1D921F1B88C7000A73FC /* View */,
@@ -197,6 +219,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A1DB5F32BF6FE21AA3D162DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0D1DC4C7BB66CAB2EBAEC54 /* Pods-koebito.debug.xcconfig */,
+				7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */,
+				CBF893600182208B36E14488 /* Pods-koebitoTests.debug.xcconfig */,
+				09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */,
+				94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */,
+				4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,10 +239,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94FE1D871F1B7B62000A73FC /* Build configuration list for PBXNativeTarget "koebito" */;
 			buildPhases = (
+				4855DC88711C182633F09FF5 /* [CP] Check Pods Manifest.lock */,
 				94FE1D591F1B7B61000A73FC /* Sources */,
 				94FE1D5A1F1B7B61000A73FC /* Frameworks */,
 				94FE1D5B1F1B7B61000A73FC /* Resources */,
 				94358A8E1F1BD0AC00A07E9C /* Embed Frameworks */,
+				CEF491BE7F8AB98E29128065 /* [CP] Embed Pods Frameworks */,
+				196E9026A9920B23E7F4B197 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94FE1D8A1F1B7B62000A73FC /* Build configuration list for PBXNativeTarget "koebitoTests" */;
 			buildPhases = (
+				E56BDC1D8CE847DA9496DB3D /* [CP] Check Pods Manifest.lock */,
 				94FE1D6F1F1B7B62000A73FC /* Sources */,
 				94FE1D701F1B7B62000A73FC /* Frameworks */,
 				94FE1D711F1B7B62000A73FC /* Resources */,
+				DFF52E634BAA371A0B53DCE9 /* [CP] Embed Pods Frameworks */,
+				026E22CE480C71A6BEA7E8D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94FE1D8D1F1B7B62000A73FC /* Build configuration list for PBXNativeTarget "koebitoUITests" */;
 			buildPhases = (
+				9EF78AE29DBAB24D3C3821EF /* [CP] Check Pods Manifest.lock */,
 				94FE1D7A1F1B7B62000A73FC /* Sources */,
 				94FE1D7B1F1B7B62000A73FC /* Frameworks */,
 				94FE1D7C1F1B7B62000A73FC /* Resources */,
+				24C67286D0D037613ECF892A /* [CP] Embed Pods Frameworks */,
+				E9C8BD1E8B8952088894F70E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +353,7 @@
 			files = (
 				94FE1D941F1B8991000A73FC /* KindCollectionViewCell.xib in Resources */,
 				94FE1D6D1F1B7B61000A73FC /* LaunchScreen.storyboard in Resources */,
+				94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */,
 				94FE1D6A1F1B7B61000A73FC /* Assets.xcassets in Resources */,
 				94FE1D681F1B7B61000A73FC /* Main.storyboard in Resources */,
 			);
@@ -329,6 +374,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		026E22CE480C71A6BEA7E8D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		196E9026A9920B23E7F4B197 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebito/Pods-koebito-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24C67286D0D037613ECF892A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4855DC88711C182633F09FF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF78AE29DBAB24D3C3821EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF491BE7F8AB98E29128065 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebito/Pods-koebito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF52E634BAA371A0B53DCE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56BDC1D8CE847DA9496DB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C8BD1E8B8952088894F70E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94FE1D591F1B7B61000A73FC /* Sources */ = {
@@ -488,6 +671,7 @@
 		};
 		94FE1D881F1B7B62000A73FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D1DC4C7BB66CAB2EBAEC54 /* Pods-koebito.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK27Y6U39D;
@@ -505,6 +689,7 @@
 		};
 		94FE1D891F1B7B62000A73FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK27Y6U39D;
@@ -522,6 +707,7 @@
 		};
 		94FE1D8B1F1B7B62000A73FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF893600182208B36E14488 /* Pods-koebitoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +723,7 @@
 		};
 		94FE1D8C1F1B7B62000A73FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +739,7 @@
 		};
 		94FE1D8E1F1B7B62000A73FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HK27Y6U39D;
@@ -566,6 +754,7 @@
 		};
 		94FE1D8F1F1B7B62000A73FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HK27Y6U39D;
