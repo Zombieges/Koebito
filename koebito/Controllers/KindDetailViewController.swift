@@ -9,39 +9,33 @@
 import UIKit
 import Hydra
 import Firebase
+import ObjectMapper
 
 class KindDetailViewController: UIViewController {
     
+    var kind: Kinds?
     let DBRef = Database.database().reference()
-    typealias UsersResponse = [[String : AnyObject]]
-
+    //typealias UsersResponse = [[String : AnyObject]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fetchUsersInfo = Promise<UsersResponse> { resolve, reject in
+        /// fethch user infomations
+        Promise<[UserInformations]> { resolve, reject in
             
             let defaultPlace = self.DBRef.child("voices")
             defaultPlace.observe(.value) { (snap: DataSnapshot) in
-                //resolove(JSON(snap.value! as AnyObject))
-                if let result = snap.value as? UsersResponse {
-                    resolve(result)
+                if let result = snap.value as? [[String : AnyObject]] {
+                    
+                    let users = Mapper<UserInformations>().mapArray(JSONArray: result)
+                    resolve(users)
                 }
             }
+            
         }.then { result in
-            // 画面表示処理
+            
+            /// check if the url of pictures are chenged
             print(result)
-            
-            //let user = UserListsRequset(map: result)
-            print(type(of: result))
-            
-            //let user = UserListsRequset(JSON: result)
-            //let user = Mapper<UserListsRequset>().map
-            //let user = Mapper<UserListsRequset>().mapArray(JSONArray: result)
-            //let jsonjj = "{\"gender\":1,\"userName\":\"aaaaa\"}"
-            //let user = UserListsRequset(JSONString: jsonjj)
-            
-            print("aa")
         }
     }
 }

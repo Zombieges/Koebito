@@ -35,3 +35,26 @@ var cellSize: CGFloat? {
     }
     return viewFrameWidth/2-1
 }
+
+enum Kinds: Int {
+    case crying
+    case love
+    case sulk
+    case mad
+    case encourage
+    
+    var KindName: String {
+        switch self {
+        case .crying:
+            return "泣いてる系"
+        case .love:
+            return "甘える系"
+        case .sulk:
+            return "拗ねてる系"
+        case .mad:
+            return "怒ってる系"
+        case .encourage:
+            return "励まし系"
+        }
+    }
+}

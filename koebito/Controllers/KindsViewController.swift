@@ -12,10 +12,11 @@ class KindsViewController: UIViewController {
 
     @IBOutlet weak var kindsDetailCollectionView: UICollectionView!
     let images = ["crying","love","sulk","mad","encourage"]
-    let kindsString = ["泣いてる系","甘える系","拗ねてる系","怒ってる系","励まし系"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Kinds.crying)
         
         viewFrameWidth = self.view.frame.size.width
         
@@ -23,17 +24,51 @@ class KindsViewController: UIViewController {
         let nib = UINib(nibName: "KindCollectionViewCell", bundle: nil)
         self.kindsDetailCollectionView.register(nib, forCellWithReuseIdentifier: "KindCellIdentifier")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
     
     override func viewDidLayoutSubviews() {
         if let viewFrameWidth = viewFrameWidth,
            let viewFrameHeight = viewFrameHeight {
             // coolectionView の width、height を設定
             self.kindsDetailCollectionView.frame = CGRect(x: 0, y: 0, width: viewFrameWidth, height: viewFrameHeight)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! KindDetailViewController
+        vc.kind = sender as! Kinds?
+    }
+    
+    func getKind(rawValue: Int) -> Kinds? {
+        switch rawValue {
+        case 0:
+            return Kinds.crying
+        case 1:
+            return Kinds.love
+        case 2:
+            return Kinds.sulk
+        case 3:
+            return Kinds.mad
+        case 4:
+            return Kinds.encourage
+        default:
+            return nil
+        }
+    }
+    
+    func getKindName(rawValue: Int) -> String? {
+        switch rawValue {
+        case 0:
+            return Kinds.crying.KindName
+        case 1:
+            return Kinds.love.KindName
+        case 2:
+            return Kinds.sulk.KindName
+        case 3:
+            return Kinds.mad.KindName
+        case 4:
+            return Kinds.encourage.KindName
+        default:
+            return nil
         }
     }
 }
@@ -57,7 +92,9 @@ extension KindsViewController: UICollectionViewDataSource,
         
         // Tag番号を使ってLabelのインスタンス生成
         let label = KindCell.contentView.viewWithTag(2) as! UILabel
-        label.text = kindsString[(indexPath as NSIndexPath).row]
+        if let kindName = getKindName(rawValue: indexPath[1]) {
+            label.text = kindName
+        }
         label.sizeToFit()
         
         //imageView.backgroundColor = UIColor.black
@@ -84,9 +121,11 @@ extension KindsViewController: UICollectionViewDataSource,
         return images.count
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "kindDetailSegue", sender: nil)
+        guard let kind = getKind(rawValue: indexPath[1]) else {
+            return
+        }
+        performSegue(withIdentifier: "kindDetailSegue", sender: kind)
     }
 }
 
