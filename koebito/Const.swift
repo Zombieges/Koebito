@@ -36,7 +36,7 @@ var cellSize: CGFloat? {
     return viewFrameWidth/2-1
 }
 
-enum Kinds: Int {
+enum Kinds: String {
     case crying
     case love
     case sulk
