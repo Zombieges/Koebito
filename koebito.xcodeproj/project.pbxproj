@@ -71,7 +71,7 @@
 		09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.release.xcconfig"; sourceTree = "<group>"; };
-		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
+		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/Extension/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -142,6 +142,7 @@
 				941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */,
 			);
 			name = Extension;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
@@ -179,7 +180,6 @@
 		94FE1D541F1B7B61000A73FC = {
 			isa = PBXGroup;
 			children = (
-				941C92DA1F2613D600158DC4 /* Extension */,
 				94358A921F1BD0C100A07E9C /* Frameworks */,
 				94FE1D5F1F1B7B61000A73FC /* koebito */,
 				94FE1D761F1B7B62000A73FC /* koebitoTests */,
@@ -202,6 +202,7 @@
 		94FE1D5F1F1B7B61000A73FC /* koebito */ = {
 			isa = PBXGroup;
 			children = (
+				941C92DA1F2613D600158DC4 /* Extension */,
 				94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */,
 				94358AB81F1C7FF600A07E9C /* Const.swift */,
 				94358AB31F1C4DD500A07E9C /* Controllers */,
