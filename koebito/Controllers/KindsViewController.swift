@@ -11,18 +11,20 @@ import UIKit
 class KindsViewController: UIViewController {
 
     @IBOutlet weak var kindsDetailCollectionView: UICollectionView!
-    let images = ["crying","love","sulk","mad","encourage"]
+    var images: [Kinds] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Kinds.crying)
-        
+        // set viewFrameWidth
         viewFrameWidth = self.view.frame.size.width
         
         // collectionViewSetting
         let nib = UINib(nibName: "KindCollectionViewCell", bundle: nil)
         self.kindsDetailCollectionView.register(nib, forCellWithReuseIdentifier: "KindCellIdentifier")
+        
+        // get image's name from enum
+        images = Kinds.cases
     }
     
     override func viewDidLayoutSubviews() {
@@ -84,7 +86,7 @@ extension KindsViewController: UICollectionViewDataSource,
         // Tag番号にてImageViewのインスタンス生成
         let imageView = KindCell.contentView.viewWithTag(1) as! UIImageView
         // 画像配列の番号で指定された要素の名前の画像をUIImageとする
-        let cellImage = UIImage(named: images[(indexPath as NSIndexPath).row])
+        let cellImage = UIImage(named: images[(indexPath as NSIndexPath).row].rawValue)
         // UIImageをUIImageViewのimageとして設定
         imageView.image = cellImage
         imageView.sizeToFit()
@@ -118,7 +120,7 @@ extension KindsViewController: UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return Kinds.cases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

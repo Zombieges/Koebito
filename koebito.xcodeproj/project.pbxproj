@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1834FEC285BA2AE96F5F6E74 /* Pods_koebitoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCECF4B2FCCA83BE79452EA /* Pods_koebitoTests.framework */; };
+		941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */; };
 		941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; };
 		941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; };
@@ -70,6 +71,7 @@
 		09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.release.xcconfig"; sourceTree = "<group>"; };
+		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		941C92DA1F2613D600158DC4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
 				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
+				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,
 				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
