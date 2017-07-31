@@ -16,21 +16,18 @@ class KindDetailViewController: UIViewController {
     
     var kind: Kinds?
     let DBRef = Database.database().reference()
+    let STRef = Storage.storage().reference()
     //typealias UsersResponse = [[String : AnyObject]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getLatestVoices().then(getImageUrl)
         
-        getVoices().then { voices in
-            print(voices)
-            for object in voices[0] {
-                if object.key == "ownerId" {
-                    self.getImageUrl(OwnerIageUrl: object.value as! Int).then { users in
-                        print(users)
-                    }
-                }
-            }
-        }
+        
+//        getVoices().then { voices in
+//            print(voices)
+//
+//        }
         /// fethch user infomations
 //        let getVoices:  Promise<[[String : AnyObject]]>
 //        Promise<[[String : AnyObject]]> { resolve, reject in
@@ -58,31 +55,51 @@ class KindDetailViewController: UIViewController {
 //            }
 //        }
     }
-    func getVoices() -> Promise<[[String : AnyObject]]> {
-        return Promise<[[String : AnyObject]]> (in: .background, { resolve, reject in
+    func getLatestVoices() -> Promise<[String]> {
+        return Promise (in: .background, { resolve, reject in
             guard let kind = self.kind else {
                 return
             }
+            // TODO: orderby timestanp(desc)
             let defaultPlace = self.DBRef.child("voices").child(kind.rawValue)
             defaultPlace.observe(.value) { (snap: DataSnapshot) in
                 if let voices = snap.value as? [[String : AnyObject]] {
                     
                     //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
-                    resolve(voices)
+                    //resolve(voices)
+                    var soundUrls: [String] = []
+                    for object in voices[0] {
+                        if object.key == "soundUrl" {
+                            soundUrls.append(object.value as! String)
+                        }
+                    }
+                    print(voices)
+                    resolve(soundUrls)
                 }
             }
         })
     }
-    func getImageUrl(OwnerIageUrl: Int) -> Promise<[[String : AnyObject]]> {
+    func getImageUrl(soundUrls: [String]) -> Promise<[[String : AnyObject]]> {
         return Promise<[[String : AnyObject]]> (in: .background, { resolve, reject in
 
-            let defaultPlace = self.DBRef.child("users").child(String(OwnerIageUrl))
-            defaultPlace.observe(.value) { (snap: DataSnapshot) in
-                if let users = snap.value as? [[String : AnyObject]] {
-                    
-                    //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
-                    resolve(users)
+            //let pathReference = storage.reference("images/stars.jpg")
+            for url in soundUrls {
+                let defaultPlace = self.STRef.child(url)
+                defaultPlace.getData(maxSize: 1) { (data, error) -> Void in
+                    if (error != nil) {
+                        // Uh-oh, an error occurred!
+                    } else {
+                        // Data for "images/island.jpg" is returned
+                        let islandImage: UIImage! = UIImage(data: data!)
+                    }
                 }
+//                defaultPlace.observe(.value) { (snap: DataSnapshot) in
+//                    if let users = snap.value as? [[String : AnyObject]] {
+//                        
+//                        //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
+//                        resolve(users)
+//                    }
+//                }
             }
         })
     }
