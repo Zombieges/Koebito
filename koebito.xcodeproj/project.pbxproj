@@ -20,9 +20,12 @@
 		94358AB91F1C7FF600A07E9C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB81F1C7FF600A07E9C /* Const.swift */; };
 		94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94991F9D1F230CBF001BED30 /* UserInformations.swift */; };
 		94991FA01F232C8F001BED30 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94991F9F1F232C8E001BED30 /* AdSupport.framework */; };
+		94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */; };
+		94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */; };
+		94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE190E1F3DAD0E002EABF4 /* images.xcassets */; };
 		94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D601F1B7B61000A73FC /* AppDelegate.swift */; };
 		94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D621F1B7B61000A73FC /* KindsViewController.swift */; };
-		94FE1D651F1B7B61000A73FC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D641F1B7B61000A73FC /* SecondViewController.swift */; };
+		94FE1D651F1B7B61000A73FC /* MySoundSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D641F1B7B61000A73FC /* MySoundSourcesViewController.swift */; };
 		94FE1D681F1B7B61000A73FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE1D661F1B7B61000A73FC /* Main.storyboard */; };
 		94FE1D6A1F1B7B61000A73FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FE1D691F1B7B61000A73FC /* Assets.xcassets */; };
 		94FE1D6D1F1B7B61000A73FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE1D6B1F1B7B61000A73FC /* LaunchScreen.storyboard */; };
@@ -80,11 +83,14 @@
 		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		94991F9D1F230CBF001BED30 /* UserInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformations.swift; path = koebito/Model/UserInformations.swift; sourceTree = SOURCE_ROOT; };
 		94991F9F1F232C8E001BED30 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
+		94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		94BE190E1F3DAD0E002EABF4 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94FE1D5D1F1B7B61000A73FC /* koebito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koebito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FE1D601F1B7B61000A73FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94FE1D621F1B7B61000A73FC /* KindsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindsViewController.swift; sourceTree = "<group>"; };
-		94FE1D641F1B7B61000A73FC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		94FE1D641F1B7B61000A73FC /* MySoundSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySoundSourcesViewController.swift; sourceTree = "<group>"; };
 		94FE1D671F1B7B61000A73FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94FE1D691F1B7B61000A73FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94FE1D6C1F1B7B61000A73FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -172,7 +178,7 @@
 			children = (
 				94FE1D621F1B7B61000A73FC /* KindsViewController.swift */,
 				94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */,
-				94FE1D641F1B7B61000A73FC /* SecondViewController.swift */,
+				94FE1D641F1B7B61000A73FC /* MySoundSourcesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				94FE1D691F1B7B61000A73FC /* Assets.xcassets */,
 				94FE1D6B1F1B7B61000A73FC /* LaunchScreen.storyboard */,
 				94FE1D6E1F1B7B62000A73FC /* Info.plist */,
+				94BE190E1F3DAD0E002EABF4 /* images.xcassets */,
 			);
 			path = koebito;
 			sourceTree = "<group>";
@@ -240,6 +247,8 @@
 			children = (
 				94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */,
 				94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */,
+				94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */,
+				94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */,
+				94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */,
 				94FE1D941F1B8991000A73FC /* KindCollectionViewCell.xib in Resources */,
 				94FE1D6D1F1B7B61000A73FC /* LaunchScreen.storyboard in Resources */,
 				94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */,
@@ -544,11 +555,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FE1D9A1F1B8AAD000A73FC /* KindCollectionViewCell.swift in Sources */,
-				94FE1D651F1B7B61000A73FC /* SecondViewController.swift in Sources */,
+				94FE1D651F1B7B61000A73FC /* MySoundSourcesViewController.swift in Sources */,
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
 				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
+				94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */,
 				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,
 				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ class KindDetailViewController: UIViewController {
     
     var kind: Kinds?
     let DBRef = Database.database().reference()
-    let STRef = Storage.storage().reference()
+    let STRef = Storage.storage().reference(forURL: "gs://~~~~")
     //typealias UsersResponse = [[String : AnyObject]]
     
     override func viewDidLoad() {
@@ -82,10 +82,11 @@ class KindDetailViewController: UIViewController {
     func getImageUrl(soundUrls: [String]) -> Promise<[[String : AnyObject]]> {
         return Promise<[[String : AnyObject]]> (in: .background, { resolve, reject in
 
-            //let pathReference = storage.reference("images/stars.jpg")
+            // TODO:キャッシュ確認
             for url in soundUrls {
-                let defaultPlace = self.STRef.child(url)
-                defaultPlace.getData(maxSize: 1) { (data, error) -> Void in
+                //let defaultPlace = self.STRef.child(url)
+                let defaultPlace = self.STRef.child("voices").child("001-sibutomo.mp3")
+                defaultPlace.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
                     if (error != nil) {
                         // Uh-oh, an error occurred!
                     } else {
@@ -93,13 +94,6 @@ class KindDetailViewController: UIViewController {
                         let islandImage: UIImage! = UIImage(data: data!)
                     }
                 }
-//                defaultPlace.observe(.value) { (snap: DataSnapshot) in
-//                    if let users = snap.value as? [[String : AnyObject]] {
-//                        
-//                        //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
-//                        resolve(users)
-//                    }
-//                }
             }
         })
     }
