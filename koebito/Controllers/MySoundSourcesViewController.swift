@@ -11,16 +11,20 @@ import UIKit
 class MySoundSourcesViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIView!
-
+    @IBOutlet weak var soundsList: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidLayoutSubviews() {
-        let ProfileImageViewNib = UINib(nibName: "ProfileImageView", bundle: nil).instantiate(withOwner: self, options: nil).first as? ProfileImageView
-        self.view.addSubview(ProfileImageViewNib!)
-        //profileImage.addSubview(ProfileImageViewNib!)
+        
+        // set up profileImageView
+        let ProfileImageViewNib = ProfileImageView.instantiate(ownerOrNil: nil, options: nil)
+        profileImage.addSubview(ProfileImageViewNib)
+        // set up tableView
+        let SoundsListTableViewNib = SoundsList.instantiate(ownerOrNil: nil, options: nil)
+        soundsList.addSubview(SoundsListTableViewNib)
     }
 }
 

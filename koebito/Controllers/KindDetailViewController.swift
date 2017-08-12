@@ -16,7 +16,8 @@ class KindDetailViewController: UIViewController {
     
     var kind: Kinds?
     let DBRef = Database.database().reference()
-    let STRef = Storage.storage().reference(forURL: "gs://~~~~")
+    //let STRef = Storage.storage().reference(forURL: "gs://~~~~")
+    let STRef = Storage.storage().reference()
     //typealias UsersResponse = [[String : AnyObject]]
     
     override func viewDidLoad() {

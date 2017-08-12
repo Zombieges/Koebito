@@ -11,6 +11,9 @@
 		941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */; };
 		941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; };
 		941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */; };
+		94221A841F3EF20C00DA0FE2 /* SoundsList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94221A831F3EF20C00DA0FE2 /* SoundsList.xib */; };
+		94221A861F3EF22100DA0FE2 /* SoundsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94221A851F3EF22100DA0FE2 /* SoundsList.swift */; };
 		94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; };
 		94358A8D1F1BD0AC00A07E9C /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
@@ -76,6 +79,9 @@
 		7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.release.xcconfig"; sourceTree = "<group>"; };
 		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/Extension/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
+		94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NibInstantiatable+Extension.swift"; path = "koebito/Extension/NibInstantiatable+Extension.swift"; sourceTree = "<group>"; };
+		94221A831F3EF20C00DA0FE2 /* SoundsList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsList.xib; sourceTree = "<group>"; };
+		94221A851F3EF22100DA0FE2 /* SoundsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsList.swift; sourceTree = "<group>"; };
 		94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -145,10 +151,22 @@
 		941C92DA1F2613D600158DC4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */,
 				941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */,
 			);
 			name = Extension;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		94221A821F3EEEF900DA0FE2 /* MySoundSourcesView */ = {
+			isa = PBXGroup;
+			children = (
+				94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */,
+				94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */,
+				94221A831F3EF20C00DA0FE2 /* SoundsList.xib */,
+				94221A851F3EF22100DA0FE2 /* SoundsList.swift */,
+			);
+			path = MySoundSourcesView;
 			sourceTree = "<group>";
 		};
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
@@ -246,9 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */,
+				94221A821F3EEEF900DA0FE2 /* MySoundSourcesView */,
 				94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */,
-				94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */,
-				94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +409,7 @@
 				94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */,
 				94FE1D6A1F1B7B61000A73FC /* Assets.xcassets in Resources */,
 				94FE1D681F1B7B61000A73FC /* Main.storyboard in Resources */,
+				94221A841F3EF20C00DA0FE2 /* SoundsList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94221A861F3EF22100DA0FE2 /* SoundsList.swift in Sources */,
 				94FE1D9A1F1B8AAD000A73FC /* KindCollectionViewCell.swift in Sources */,
 				94FE1D651F1B7B61000A73FC /* MySoundSourcesViewController.swift in Sources */,
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
@@ -562,6 +581,7 @@
 				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
 				94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */,
 				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,
+				94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */,
 				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
