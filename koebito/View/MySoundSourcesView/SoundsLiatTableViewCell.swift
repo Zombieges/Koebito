@@ -3,7 +3,7 @@
 //  koebito
 //
 //  Created by Kazuhiro Watanabe on 2017/08/12.
-//
+//  Copyright © 2017年 Zombieges. All rights reserved.
 //
 
 import UIKit

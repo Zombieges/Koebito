@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1834FEC285BA2AE96F5F6E74 /* Pods_koebitoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCECF4B2FCCA83BE79452EA /* Pods_koebitoTests.framework */; };
+		940DC2521F3F5164007A8876 /* SoundsListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2511F3F5164007A8876 /* SoundsListTableView.swift */; };
+		940DC2541F3F5A6B007A8876 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2531F3F5A6B007A8876 /* UITableView+Extension.swift */; };
 		941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */; };
 		941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; };
 		941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -77,6 +79,8 @@
 		09F81CA1DE1522CA68D2E6CD /* Pods-koebitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoTests/Pods-koebitoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4683489A04B1E2BE3AB9ACE3 /* Pods-koebitoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7A26B7E8B23A46C1B11FB4E4 /* Pods-koebito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebito.release.xcconfig"; path = "Pods/Target Support Files/Pods-koebito/Pods-koebito.release.xcconfig"; sourceTree = "<group>"; };
+		940DC2511F3F5164007A8876 /* SoundsListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsListTableView.swift; sourceTree = "<group>"; };
+		940DC2531F3F5A6B007A8876 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "koebito/Extension/UITableView+Extension.swift"; sourceTree = "<group>"; };
 		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/Extension/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NibInstantiatable+Extension.swift"; path = "koebito/Extension/NibInstantiatable+Extension.swift"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */,
 				941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */,
+				940DC2531F3F5A6B007A8876 /* UITableView+Extension.swift */,
 			);
 			name = Extension;
 			path = ..;
@@ -165,6 +170,7 @@
 				94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */,
 				94221A871F3F06A800DA0FE2 /* SoundsListTableViewCell.xib */,
 				94221A891F3F06F200DA0FE2 /* SoundsLiatTableViewCell.swift */,
+				940DC2511F3F5164007A8876 /* SoundsListTableView.swift */,
 			);
 			path = MySoundSourcesView;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				94FE1D9A1F1B8AAD000A73FC /* KindCollectionViewCell.swift in Sources */,
 				94FE1D651F1B7B61000A73FC /* MySoundSourcesViewController.swift in Sources */,
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
+				940DC2521F3F5164007A8876 /* SoundsListTableView.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
 				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
@@ -583,6 +590,7 @@
 				94221A8A1F3F06F200DA0FE2 /* SoundsLiatTableViewCell.swift in Sources */,
 				94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */,
 				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
+				940DC2541F3F5A6B007A8876 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +750,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;
@@ -761,6 +770,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;

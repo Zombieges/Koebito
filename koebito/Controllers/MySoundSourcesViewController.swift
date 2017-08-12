@@ -19,9 +19,9 @@ class MySoundSourcesViewController: UIViewController {
         // set up profileImageView
         let ProfileImageViewNib = ProfileImageView.instantiate(ownerOrNil: nil, options: nil)
         profileImage.addSubview(ProfileImageViewNib)
-        // set up tableView
-        let nib = UINib(nibName: "SoundsLiatTableViewCell", bundle: nil)
-        soundsListTableView.register(nib, forCellReuseIdentifier: "SoundsListCellIdentifier")
+//        // set up tableView
+//        let nib = UINib(nibName: "SoundsLiatTableViewCell", bundle: nil)
+//        soundsListTableView.register(nib, forCellReuseIdentifier: "SoundsListCellIdentifier")
     }
     
     override func viewDidLayoutSubviews() {
@@ -29,17 +29,17 @@ class MySoundSourcesViewController: UIViewController {
     }
 }
 
-
-extension MySoundSourcesViewController: UITableViewDataSource,
-                                        UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SoundsListCellIdentifier") as! SoundsLiatTableViewCell
-        cell.textLabel?.text = ""
-        return cell
-    }
-}
+//
+//extension MySoundSourcesViewController: UITableViewDataSource,
+//                                        UITableViewDelegate {
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "SoundsListCellIdentifier") as! SoundsLiatTableViewCell
+//        cell.textLabel?.text = ""
+//        return cell
+//    }
+//}
