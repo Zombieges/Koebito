@@ -28,11 +28,12 @@ class SoundsListTableView: UITableView,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // TODO: nabe Model よりデータ数を取得
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        // TODO: nabe Model よりデータを取得
         let cell = tableView.dequeueCell(type: SoundsLiatTableViewCell.self, indexPath: indexPath)
         cell.textLabel?.text = ""
         return cell

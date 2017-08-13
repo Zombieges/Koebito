@@ -13,6 +13,8 @@
 		940DC2A01F3F6EF0007A8876 /* SoundsLiatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940DC29F1F3F6EF0007A8876 /* SoundsLiatTableViewCell.xib */; };
 		940DC2A21F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2A11F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift */; };
 		940DC2A61F3F709B007A8876 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2A51F3F709B007A8876 /* NSObject+Extension.swift */; };
+		940DC2AC1F401A5A007A8876 /* AddSound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940DC2AB1F401A5A007A8876 /* AddSound.xib */; };
+		940DC2AE1F401ADF007A8876 /* AddSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2AD1F401ADF007A8876 /* AddSound.swift */; };
 		941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */; };
 		941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; };
 		941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -85,6 +87,8 @@
 		940DC29F1F3F6EF0007A8876 /* SoundsLiatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsLiatTableViewCell.xib; sourceTree = "<group>"; };
 		940DC2A11F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsLiatTableViewCell.swift; sourceTree = "<group>"; };
 		940DC2A51F3F709B007A8876 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "koebito/Extension/NSObject+Extension.swift"; sourceTree = "<group>"; };
+		940DC2AB1F401A5A007A8876 /* AddSound.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSound.xib; sourceTree = "<group>"; };
+		940DC2AD1F401ADF007A8876 /* AddSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSound.swift; sourceTree = "<group>"; };
 		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/Extension/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NibInstantiatable+Extension.swift"; path = "koebito/Extension/NibInstantiatable+Extension.swift"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				940DC29F1F3F6EF0007A8876 /* SoundsLiatTableViewCell.xib */,
 				940DC2A11F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift */,
 				940DC2511F3F5164007A8876 /* SoundsListTableView.swift */,
+				940DC2AB1F401A5A007A8876 /* AddSound.xib */,
+				940DC2AD1F401ADF007A8876 /* AddSound.swift */,
 			);
 			path = MySoundSourcesView;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */,
 				94FE1D941F1B8991000A73FC /* KindCollectionViewCell.xib in Resources */,
 				94FE1D6D1F1B7B61000A73FC /* LaunchScreen.storyboard in Resources */,
+				940DC2AC1F401A5A007A8876 /* AddSound.xib in Resources */,
 				94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */,
 				940DC2A01F3F6EF0007A8876 /* SoundsLiatTableViewCell.xib in Resources */,
 				94221A8D1F3F23F100DA0FE2 /* Main.storyboard in Resources */,
@@ -583,6 +590,7 @@
 			files = (
 				94FE1D9A1F1B8AAD000A73FC /* KindCollectionViewCell.swift in Sources */,
 				94FE1D651F1B7B61000A73FC /* MySoundSourcesViewController.swift in Sources */,
+				940DC2AE1F401ADF007A8876 /* AddSound.swift in Sources */,
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
 				940DC2521F3F5164007A8876 /* SoundsListTableView.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
