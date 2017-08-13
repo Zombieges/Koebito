@@ -39,23 +39,6 @@ class KindsViewController: UIViewController {
         let vc = segue.destination as! KindDetailViewController
         vc.kind = sender as! Kinds?
     }
-    
-    func getKind(rawValue: Int) -> Kinds? {
-        switch rawValue {
-        case 0:
-            return Kinds.crying
-        case 1:
-            return Kinds.love
-        case 2:
-            return Kinds.sulk
-        case 3:
-            return Kinds.mad
-        case 4:
-            return Kinds.encourage
-        default:
-            return nil
-        }
-    }
 }
 
 extension KindsViewController: UICollectionViewDataSource,
@@ -69,7 +52,13 @@ extension KindsViewController: UICollectionViewDataSource,
         // Tag番号にてImageViewのインスタンス生成
         let imageView = KindCell.contentView.viewWithTag(1) as! UIImageView
         // 画像配列の番号で指定された要素の名前の画像をUIImageとする
-        let cellImage = UIImage(named: images[(indexPath as NSIndexPath).row].rawValue)
+        
+        // get Kind type
+        let kindType = Kinds(rawValue: (indexPath as NSIndexPath).row)
+        
+        // set image fron enum
+        let cellImage = kindType?.image
+        
         // UIImageをUIImageViewのimageとして設定
         imageView.image = cellImage
         imageView.sizeToFit()
@@ -77,9 +66,8 @@ extension KindsViewController: UICollectionViewDataSource,
         
         // Tag番号を使ってLabelのインスタンス生成
         let label = KindCell.contentView.viewWithTag(2) as! UILabel
-        if let kindName = Kinds.getKindName(rawValue: indexPath[1]) {
-            label.text = kindName
-        }
+        label.text = kindType?.KindName
+
         label.sizeToFit()
         
         //imageView.backgroundColor = UIColor.black
@@ -107,7 +95,7 @@ extension KindsViewController: UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let kind = getKind(rawValue: indexPath[1]) else {
+        guard let kind = Kinds(rawValue: (indexPath as NSIndexPath).row) else {
             return
         }
         performSegue(withIdentifier: "kindDetailSegue", sender: kind)

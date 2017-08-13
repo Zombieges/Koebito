@@ -62,22 +62,22 @@ class KindDetailViewController: UIViewController {
                 return
             }
             // TODO: orderby timestanp(desc)
-            let defaultPlace = self.DBRef.child("voices").child(kind.rawValue)
-            defaultPlace.observe(.value) { (snap: DataSnapshot) in
-                if let voices = snap.value as? [[String : AnyObject]] {
-                    
-                    //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
-                    //resolve(voices)
-                    var soundUrls: [String] = []
-                    for object in voices[0] {
-                        if object.key == "soundUrl" {
-                            soundUrls.append(object.value as! String)
-                        }
-                    }
-                    print(voices)
-                    resolve(soundUrls)
-                }
-            }
+//            let defaultPlace = self.DBRef.child("voices").child(kind.rawValue)
+//            defaultPlace.observe(.value) { (snap: DataSnapshot) in
+//                if let voices = snap.value as? [[String : AnyObject]] {
+//                    
+//                    //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
+//                    //resolve(voices)
+//                    var soundUrls: [String] = []
+//                    for object in voices[0] {
+//                        if object.key == "soundUrl" {
+//                            soundUrls.append(object.value as! String)
+//                        }
+//                    }
+//                    print(voices)
+//                    resolve(soundUrls)
+//                }
+//            }
         })
     }
     func getImageUrl(soundUrls: [String]) -> Promise<[[String : AnyObject]]> {

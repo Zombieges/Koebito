@@ -24,7 +24,7 @@ class SoundsListTableView: UITableView,
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Kinds.getKindName(rawValue: section)
+        return Kinds(rawValue: section)?.KindName
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

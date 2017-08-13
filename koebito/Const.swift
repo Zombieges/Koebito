@@ -36,7 +36,7 @@ var cellSize: CGFloat? {
     return viewFrameWidth/2-1
 }
 
-enum Kinds: String, EnumEnumerable {
+enum Kinds: Int, EnumEnumerable {
     case crying
     case love
     case sulk
@@ -46,32 +46,19 @@ enum Kinds: String, EnumEnumerable {
     var KindName: String {
         switch self {
         case .crying:
-            return "泣いてる系"
+            return "crying"
         case .love:
-            return "甘える系"
+            return "love"
         case .sulk:
-            return "拗ねてる系"
+            return "sulk"
         case .mad:
-            return "怒ってる系"
+            return "mad"
         case .encourage:
-            return "励まし系"
+            return "encourage"
         }
     }
     
-    static func getKindName(rawValue: Int) -> String? {
-        switch rawValue {
-        case 0:
-            return Kinds.crying.KindName
-        case 1:
-            return Kinds.love.KindName
-        case 2:
-            return Kinds.sulk.KindName
-        case 3:
-            return Kinds.mad.KindName
-        case 4:
-            return Kinds.encourage.KindName
-        default:
-            return nil
-        }
+    var image: UIImage? {
+        return UIImage(named: KindName)
     }
 }
