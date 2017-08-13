@@ -56,23 +56,6 @@ class KindsViewController: UIViewController {
             return nil
         }
     }
-    
-    func getKindName(rawValue: Int) -> String? {
-        switch rawValue {
-        case 0:
-            return Kinds.crying.KindName
-        case 1:
-            return Kinds.love.KindName
-        case 2:
-            return Kinds.sulk.KindName
-        case 3:
-            return Kinds.mad.KindName
-        case 4:
-            return Kinds.encourage.KindName
-        default:
-            return nil
-        }
-    }
 }
 
 extension KindsViewController: UICollectionViewDataSource,
@@ -94,7 +77,7 @@ extension KindsViewController: UICollectionViewDataSource,
         
         // Tag番号を使ってLabelのインスタンス生成
         let label = KindCell.contentView.viewWithTag(2) as! UILabel
-        if let kindName = getKindName(rawValue: indexPath[1]) {
+        if let kindName = Kinds.getKindName(rawValue: indexPath[1]) {
             label.text = kindName
         }
         label.sizeToFit()

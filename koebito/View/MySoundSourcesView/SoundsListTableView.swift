@@ -19,6 +19,14 @@ class SoundsListTableView: UITableView,
         registerCell(type: SoundsLiatTableViewCell.self)
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return Kinds.cases.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return Kinds.getKindName(rawValue: section)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

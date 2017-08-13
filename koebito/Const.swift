@@ -57,4 +57,21 @@ enum Kinds: String, EnumEnumerable {
             return "励まし系"
         }
     }
+    
+    static func getKindName(rawValue: Int) -> String? {
+        switch rawValue {
+        case 0:
+            return Kinds.crying.KindName
+        case 1:
+            return Kinds.love.KindName
+        case 2:
+            return Kinds.sulk.KindName
+        case 3:
+            return Kinds.mad.KindName
+        case 4:
+            return Kinds.encourage.KindName
+        default:
+            return nil
+        }
+    }
 }
