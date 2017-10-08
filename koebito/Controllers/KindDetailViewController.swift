@@ -11,6 +11,7 @@ import Hydra
 import Firebase
 import ObjectMapper
 import SwiftyJSON
+import Alamofire
 
 class KindDetailViewController: UIViewController {
     
@@ -61,23 +62,16 @@ class KindDetailViewController: UIViewController {
             guard let kind = self.kind else {
                 return
             }
-            // TODO: orderby timestanp(desc)
-//            let defaultPlace = self.DBRef.child("voices").child(kind.rawValue)
-//            defaultPlace.observe(.value) { (snap: DataSnapshot) in
-//                if let voices = snap.value as? [[String : AnyObject]] {
-//                    
-//                    //let voices = Mapper<UserInformations>().mapArray(JSONArray: result)
-//                    //resolve(voices)
-//                    var soundUrls: [String] = []
-//                    for object in voices[0] {
-//                        if object.key == "soundUrl" {
-//                            soundUrls.append(object.value as! String)
-//                        }
-//                    }
-//                    print(voices)
-//                    resolve(soundUrls)
-//                }
-//            }
+            let parameters: Parameters = ["kind": kind]
+            Alamofire.request("https://koebito-api.herokuapp.com/api/voices", parameters: parameters).responseJSON { response in
+                print("Request: \(String(describing: response.request))")   // original url request
+                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")                         // response serialization result
+
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+            }
         })
     }
     func getImageUrl(soundUrls: [String]) -> Promise<[[String : AnyObject]]> {

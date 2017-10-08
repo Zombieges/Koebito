@@ -1,3 +1,4 @@
 github "SwiftyJSON/SwiftyJSON"
 github "Hearst-DD/ObjectMapper"
 github "malcommac/Hydra"
+github "Alamofire/Alamofire"

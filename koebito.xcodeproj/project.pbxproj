@@ -28,7 +28,8 @@
 		94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */; };
 		94358AB91F1C7FF600A07E9C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB81F1C7FF600A07E9C /* Const.swift */; };
 		94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94991F9D1F230CBF001BED30 /* UserInformations.swift */; };
-		94991FA01F232C8F001BED30 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94991F9F1F232C8E001BED30 /* AdSupport.framework */; };
+		94AFC2761F8893F300D99BE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AFC2751F8893F300D99BE2 /* Alamofire.framework */; };
+		94AFC2771F8893F300D99BE2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94AFC2751F8893F300D99BE2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */; };
 		94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */; };
 		94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE190E1F3DAD0E002EABF4 /* images.xcassets */; };
@@ -72,6 +73,7 @@
 				941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */,
 				94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */,
 				94358A8D1F1BD0AC00A07E9C /* ObjectMapper.framework in Embed Frameworks */,
+				94AFC2771F8893F300D99BE2 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +102,7 @@
 		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		94991F9D1F230CBF001BED30 /* UserInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformations.swift; path = koebito/Model/UserInformations.swift; sourceTree = SOURCE_ROOT; };
 		94991F9F1F232C8E001BED30 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		94AFC2751F8893F300D99BE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
 		94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		94BE190E1F3DAD0E002EABF4 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
@@ -131,10 +134,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94991FA01F232C8F001BED30 /* AdSupport.framework in Frameworks */,
 				94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */,
 				941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */,
 				94358A8C1F1BD0AC00A07E9C /* ObjectMapper.framework in Frameworks */,
+				94AFC2761F8893F300D99BE2 /* Alamofire.framework in Frameworks */,
 				AFA995AC39C77748479A4047 /* Pods_koebito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +190,7 @@
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94AFC2751F8893F300D99BE2 /* Alamofire.framework */,
 				941C92DF1F261DD200158DC4 /* Hydra.framework */,
 				94991F9F1F232C8E001BED30 /* AdSupport.framework */,
 				94358A8B1F1BD0AC00A07E9C /* ObjectMapper.framework */,

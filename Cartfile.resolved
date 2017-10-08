@@ -1,3 +1,4 @@
+github "Alamofire/Alamofire" "4.5.1"
 github "Hearst-DD/ObjectMapper" "2.2.8"
 github "SwiftyJSON/SwiftyJSON" "3.1.4"
 github "malcommac/Hydra" "0.9.5"
