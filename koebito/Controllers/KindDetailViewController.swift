@@ -59,10 +59,10 @@ class KindDetailViewController: UIViewController {
     }
     func getLatestVoices() -> Promise<[String]> {
         return Promise (in: .background, { resolve, reject in
-            guard let kind = self.kind else {
+            guard let rawValue = self.kind?.rawValue else {
                 return
             }
-            let parameters: Parameters = ["kind": kind]
+            let parameters: Parameters = ["kind": rawValue]
             Alamofire.request("https://koebito-api.herokuapp.com/api/voices", parameters: parameters).responseJSON { response in
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
@@ -70,6 +70,7 @@ class KindDetailViewController: UIViewController {
 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     print("Data: \(utf8Text)") // original server data as UTF8 string
+                    resolve([utf8Text])
                 }
             }
         })

@@ -63,7 +63,6 @@ extension KindsViewController: UICollectionViewDataSource,
         imageView.image = cellImage
         imageView.sizeToFit()
         
-        
         // Tag番号を使ってLabelのインスタンス生成
         let label = KindCell.contentView.viewWithTag(2) as! UILabel
         label.text = kindType?.KindName
@@ -76,13 +75,11 @@ extension KindsViewController: UICollectionViewDataSource,
             label.layer.position = CGPoint(x: displayIncellPosition, y: displayIncellPosition + 50.0)
         }
         
-        
         // とりあえず適当に色をつけている（あとで変更する）
         KindCell.backgroundColor = UIColor(red: CGFloat(drand48()),
                                            green: CGFloat(drand48()),
                                            blue: CGFloat(drand48()),
                                            alpha: 1.0)
-        
         return KindCell
     }
     
