@@ -9,7 +9,6 @@
 import UIKit
 import Hydra
 import Firebase
-import ObjectMapper
 import SwiftyJSON
 import Alamofire
 
@@ -20,6 +19,7 @@ class KindDetailViewController: UIViewController {
     //let STRef = Storage.storage().reference(forURL: "gs://~~~~")
     let STRef = Storage.storage().reference()
     //typealias UsersResponse = [[String : AnyObject]]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class KindDetailViewController: UIViewController {
 //        }
     }
     func getLatestVoices() -> Promise<[String]> {
-        return Promise (in: .background, { resolve, reject in
+        return Promise<[String]> (in: .background, { resolve, reject, _ in
             guard let rawValue = self.kind?.rawValue else {
                 return
             }
@@ -76,7 +76,7 @@ class KindDetailViewController: UIViewController {
         })
     }
     func getImageUrl(soundUrls: [String]) -> Promise<[[String : AnyObject]]> {
-        return Promise<[[String : AnyObject]]> (in: .background, { resolve, reject in
+        return Promise<[[String : AnyObject]]> (in: .background, { resolve, reject, _ in
 
             // TODO:キャッシュ確認
             for url in soundUrls {

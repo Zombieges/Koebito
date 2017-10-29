@@ -1,4 +1,5 @@
 github "SwiftyJSON/SwiftyJSON"
-github "Hearst-DD/ObjectMapper"
-github "malcommac/Hydra"
+github "malcommac/Hydra" "1.2.1"
 github "Alamofire/Alamofire"
+github "ReactiveX/RxSwift" ~> 4.0
+github "onevcat/Kingfisher" ~> 3.13.1
