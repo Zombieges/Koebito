@@ -171,15 +171,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9419DA211F9DAF8200DA2940 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				94A89AD71FA633CE007E3E19 /* API */,
-				9419DA221F9DC54600DA2940 /* KindsViewModel.swift */,
-			);
-			name = ViewModels;
-			sourceTree = "<group>";
-		};
 		941C92DA1F2613D600158DC4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,13 +239,22 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		94A89AD71FA633CE007E3E19 /* API */ = {
+		94A89AE11FA64960007E3E19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9419DA221F9DC54600DA2940 /* KindsViewModel.swift */,
+				94A89AE21FA6496E007E3E19 /* API */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94A89AE21FA6496E007E3E19 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				94A89AD81FA633DC007E3E19 /* APIClient.swift */,
 				94A89ADC1FA63441007E3E19 /* APISetting.swift */,
 			);
-			name = API;
+			path = API;
 			sourceTree = "<group>";
 		};
 		94FE1D541F1B7B61000A73FC = {
@@ -282,8 +282,8 @@
 		94FE1D5F1F1B7B61000A73FC /* koebito */ = {
 			isa = PBXGroup;
 			children = (
+				94A89AE11FA64960007E3E19 /* ViewModels */,
 				94A89AD11FA62845007E3E19 /* Protocols */,
-				9419DA211F9DAF8200DA2940 /* ViewModels */,
 				941C92DA1F2613D600158DC4 /* Extension */,
 				94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */,
 				94358AB81F1C7FF600A07E9C /* Const.swift */,
