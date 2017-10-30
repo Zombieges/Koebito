@@ -11,7 +11,8 @@ import Alamofire
 enum APISetting: API {
     
     /// get voices
-    case getVoices(kind: Int)
+    case getVoicesWithKinds(kind: Int)
+    case getVoicesOfSpecificUser(userId: String)
     
     /// get users
     //case chatPostMessage(text: String, channel: String, options: [String: String])
@@ -20,7 +21,7 @@ enum APISetting: API {
     /// ファイルのアップロード
     /// case fileUpload(filename: String, file: Data, options: [String: String])
     
-    /// 任意のSlackのTest Tokenを利用してください
+    /// Token 
     static let token = "xoxp-xxx"
     
     var buildURL: URL {
@@ -33,15 +34,19 @@ enum APISetting: API {
     
     var path: String {
         switch self {
-        case .getVoices: return "/voices"
+        case .getVoicesWithKinds, .getVoicesOfSpecificUser: return "/voices"
         //case .chatPostMessage(text: _, channel: _, options: _): return "/chat.postMessage"
         }
     }
     
     var parameters: Parameters? {
         switch self {
-        case .getVoices(kind: let kind):
+        case .getVoicesWithKinds(kind: let kind):
             let touples = [("kind", kind)]
+            let params = Dictionary(uniqueKeysWithValues: touples)
+            return params
+        case .getVoicesOfSpecificUser(userId: let userId):
+            let touples = [("userId", userId)]
             let params = Dictionary(uniqueKeysWithValues: touples)
             return params
 //        case .chatPostMessage(text: let text, channel: let channel, options: let options):

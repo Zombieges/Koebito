@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 class KindsViewModel {
-    //let 
+    
+    // call API client
     
     
 //    enum TriggerType {
