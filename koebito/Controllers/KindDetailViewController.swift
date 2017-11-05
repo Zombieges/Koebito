@@ -11,6 +11,7 @@ import Hydra
 import Firebase
 import SwiftyJSON
 import Alamofire
+import RxSwift
 
 class KindDetailViewController: UIViewController {
     
@@ -23,8 +24,21 @@ class KindDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getLatestVoices().then(getImageUrl)
         
+        guard let rawValue = self.kind?.rawValue else {
+            return
+        }
+        let api = APISetting.getVoicesWithKinds(
+            kind: rawValue
+        )
+        let request: Observable<Any> = APIClient.dataRequest(api: api)
+        request.subscribe(
+            onNext: { (res) in
+                print(res)
+        },
+            onError: { (error) in
+                print(error)
+        })
         
 //        getVoices().then { voices in
 //            print(voices)
