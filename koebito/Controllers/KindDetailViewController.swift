@@ -31,7 +31,9 @@ class KindDetailViewController: UIViewController {
         let api = APISetting.getVoicesWithKinds(
             kind: rawValue
         )
-        let request: Observable<Any> = APIClient.dataRequest(api: api)
+        let request: Observable<Any> = APIClient.shared.dataRequest(api: api)
+        // request.concat(TaskB)
+        
         request.subscribe(
             onNext: { (res) in
                 print(res)
@@ -39,7 +41,7 @@ class KindDetailViewController: UIViewController {
             onError: { (error) in
                 print(error)
         })
-        
+//
 //        getVoices().then { voices in
 //            print(voices)
 //
