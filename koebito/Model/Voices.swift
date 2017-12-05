@@ -7,6 +7,11 @@
 
 struct Voices: Codable {
 
-    
+    let ownerId: String?
+    let ownerName: String?
+    let title: String?
+    let kind: String?
+    let soundUrl: String?
+    let ownerImageUrl: String?
     
 }
