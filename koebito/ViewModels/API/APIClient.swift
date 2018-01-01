@@ -26,10 +26,29 @@ struct APIClient {
                 
                 _ = response.subscribe(
                     onNext: { (res) in
-                        // TODO: model に値をぶっこむ
-                        // error コードによって onError に捻じ曲げる
-                        observer.on(.next(res))
-                        observer.onCompleted()
+                        
+//                        guard let data = res.data else {
+//                            let error = res.error
+//                            observer.onError(error!)
+//                            return
+//                        }
+                        
+                        do {
+                            let value = try? JSONDecoder().decode(VoicesInformations.self, from: res)
+                            //
+                            //                        let encoder = JSONEncoder()
+                            //                        encoder.outputFormatting = .prettyPrinted
+                            //let encoded = try! encoder.encode(value)
+                            print(value)
+                            
+                            // TODO モデルに突っ込む
+                            
+                            observer.on(.next(value))
+                            observer.onCompleted()
+                        } catch {
+                            // error.localizedDescription を上位側で確認
+                            observer.onError(error)
+                        }
                 },
                     onError: { (error) in
                         observer.onError(error)
@@ -41,22 +60,38 @@ struct APIClient {
     private func _dataRequest(method: HTTPMethod = .get,
                      api: API,
                      encoding: ParameterEncoding = URLEncoding.default,
-                     headers: [String: String]? = nil) -> Observable<Any> {
-        return Observable<Any>
+                     headers: [String: String]? = nil) -> Observable<Data> {
+        return Observable<Data>
             .create { (observer) -> Disposable in
                 let url = api.buildURL
-                Alamofire.request(url, method: method, parameters: api.parameters, encoding: encoding, headers: headers).responseJSON { (response:
-                    DataResponse<Any>) in
+//                let dataRequest = Alamofire.request(url, method: method, parameters: api.parameters, encoding: encoding, headers: headers)
+//                debugPrint(dataRequest)
+//                // TODO: レスポンスデータログを出力
+//
+//                dataRequest.response {(response) in
+//                    guard let data = response.data else {
+//                        return
+//                    }
+//
+//                    observer.on(.next(data))
+//                    observer.onCompleted()
+//                }
+                let dataRequest = Alamofire.request(url, method: method, parameters: api.parameters, encoding: encoding, headers: headers).responseString { (response) in
                     switch response.result {
-                    case .success(let res):
-                        observer.on(.next(res))
+                    case .success(let value):
+                        // TODO: ログ出力
+                        //print(value)
+                        guard let data = value.data(using: .utf8) else {
+                            return
+                        }
+                        observer.on(.next(data))
                         observer.onCompleted()
+
                     case .failure(let error):
-                        // データ取得エラー
-                        // [変更] 通知の処理は「observer」に任せる。
                         observer.onError(error)
                     }
                 }
+                debugPrint(dataRequest)
                 return Disposables.create()
             }
     }

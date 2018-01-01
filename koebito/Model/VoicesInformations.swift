@@ -6,15 +6,34 @@
 //  Copyright © 2017年 Zombieges. All rights reserved.
 //
 
-import Foundation
-
-struct VoicesInformations {
-    var voiceId: String
-    var kind: String
-    var owerId: String
-    var soundUrl: URL
-    var title: String
-    var userId: String
-    var userName: String
-    var imageUrl: URL
+struct VoicesInformations: Codable {
+    let error: Bool
+    let message: String
+    let voices: [Voices]
+    
+    struct Voices: Codable {
+        let kind: Int
+        let ownerId: String
+        let soundUrl: String
+        let title: String
+        let userId: String
+        let userName: String
+        let imageUrl: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case kind
+            case ownerId
+            case soundUrl
+            case title
+            case userId
+            case userName
+            case imageUrl
+        }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case error = "Error"
+        case message = "Message"
+        case voices = "Voices"
+    }
 }
