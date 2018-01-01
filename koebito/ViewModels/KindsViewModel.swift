@@ -18,7 +18,7 @@ class KindsViewModel {
 //        case refresh, loadMore
 //    }
 //    
-//    var models: Observable<[VoicesInformations]> = Observable.empty()
+//    var models: Observable<[VoicesRespose]> = Observable.empty()
 //    
 //    init(inputs: (refreshTrigger: Observable<Void>, loadMoreTrigger: Observable<Void>)) {
 //        // UI イベントのストリームをマージして一つのストリームにする

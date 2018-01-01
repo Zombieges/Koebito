@@ -34,7 +34,7 @@ struct APIClient {
 //                        }
                         
                         do {
-                            let value = try? JSONDecoder().decode(VoicesInformations.self, from: res)
+                            let value = try? JSONDecoder().decode(VoicesRespose.self, from: res)
                             //
                             //                        let encoder = JSONEncoder()
                             //                        encoder.outputFormatting = .prettyPrinted

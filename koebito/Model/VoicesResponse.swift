@@ -1,12 +1,12 @@
 //
-//  VoicesInformations.swift
+//  VoicesRespose.swift
 //  koebito
 //
 //  Created by Kazuhiro Watanabe on 2017/10/21.
 //  Copyright © 2017年 Zombieges. All rights reserved.
 //
 
-struct VoicesInformations: Codable {
+struct VoicesRespose: Codable {
     let error: Bool
     let message: String
     let voices: [Voices]

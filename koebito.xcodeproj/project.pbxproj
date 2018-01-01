@@ -15,7 +15,7 @@
 		940DC2A61F3F709B007A8876 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2A51F3F709B007A8876 /* NSObject+Extension.swift */; };
 		940DC2AC1F401A5A007A8876 /* AddSound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940DC2AB1F401A5A007A8876 /* AddSound.xib */; };
 		940DC2AE1F401ADF007A8876 /* AddSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DC2AD1F401ADF007A8876 /* AddSound.swift */; };
-		9419DA1D1F9AECAA00DA2940 /* VoicesInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419DA1C1F9AECAA00DA2940 /* VoicesInformations.swift */; };
+		9419DA1D1F9AECAA00DA2940 /* VoicesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419DA1C1F9AECAA00DA2940 /* VoicesResponse.swift */; };
 		9419DA1F1F9DA17200DA2940 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9419DA1E1F9DA17200DA2940 /* RxSwift.framework */; };
 		9419DA201F9DA17200DA2940 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9419DA1E1F9DA17200DA2940 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9419DA231F9DC54600DA2940 /* KindsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419DA221F9DC54600DA2940 /* KindsViewModel.swift */; };
@@ -98,7 +98,7 @@
 		940DC2A51F3F709B007A8876 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "koebito/Extension/NSObject+Extension.swift"; sourceTree = "<group>"; };
 		940DC2AB1F401A5A007A8876 /* AddSound.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSound.xib; sourceTree = "<group>"; };
 		940DC2AD1F401ADF007A8876 /* AddSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSound.swift; sourceTree = "<group>"; };
-		9419DA1C1F9AECAA00DA2940 /* VoicesInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesInformations.swift; sourceTree = "<group>"; };
+		9419DA1C1F9AECAA00DA2940 /* VoicesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesResponse.swift; sourceTree = "<group>"; };
 		9419DA1E1F9DA17200DA2940 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9419DA221F9DC54600DA2940 /* KindsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindsViewModel.swift; sourceTree = "<group>"; };
 		941AADC91F2C71A500985924 /* EnumEnumerable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EnumEnumerable+Extension.swift"; path = "koebito/Extension/EnumEnumerable+Extension.swift"; sourceTree = "<group>"; };
@@ -219,8 +219,9 @@
 		94358AB21F1C4DC500A07E9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94C194A21FF9F9000052C879 /* API */,
 				94991F9D1F230CBF001BED30 /* UserInformations.swift */,
-				9419DA1C1F9AECAA00DA2940 /* VoicesInformations.swift */,
+				9419DA1C1F9AECAA00DA2940 /* VoicesResponse.swift */,
 				94A89AE31FA772CC007E3E19 /* Voices.swift */,
 			);
 			path = Model;
@@ -248,12 +249,11 @@
 			isa = PBXGroup;
 			children = (
 				9419DA221F9DC54600DA2940 /* KindsViewModel.swift */,
-				94A89AE21FA6496E007E3E19 /* API */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		94A89AE21FA6496E007E3E19 /* API */ = {
+		94C194A21FF9F9000052C879 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				94A89AD81FA633DC007E3E19 /* APIClient.swift */,
@@ -652,7 +652,7 @@
 				94A89AD31FA6286A007E3E19 /* APIProtocol.swift in Sources */,
 				940DC2521F3F5164007A8876 /* SoundsListTableView.swift in Sources */,
 				94A89AD91FA633DC007E3E19 /* APIClient.swift in Sources */,
-				9419DA1D1F9AECAA00DA2940 /* VoicesInformations.swift in Sources */,
+				9419DA1D1F9AECAA00DA2940 /* VoicesResponse.swift in Sources */,
 				94F812E41FB3525500280842 /* TaskConstant.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
