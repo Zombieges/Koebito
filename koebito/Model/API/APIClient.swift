@@ -49,7 +49,7 @@ struct APIClient {
                             // error.localizedDescription を上位側で確認
                             observer.onError(error)
                         }
-                },
+                    },
                     onError: { (error) in
                         observer.onError(error)
                 })

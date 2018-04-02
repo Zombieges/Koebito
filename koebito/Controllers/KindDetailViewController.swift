@@ -9,11 +9,13 @@
 import UIKit
 //import Hydra
 import Firebase
-import SwiftyJSON
-import Alamofire
 import RxSwift
 
 class KindDetailViewController: UIViewController {
+    
+    @IBOutlet weak var SoundListEachKindTableView: SoundListEachKindTableView!
+    
+    private let soundListEachKindViewModel = SoundListEachKindViewModel()
     
     var kind: Kinds?
     let DBRef = Database.database().reference()
@@ -38,6 +40,8 @@ class KindDetailViewController: UIViewController {
             onError: { (error) in
                 print(error)
         })
+        
+        // TODO: soundListEachKindViewModel のリクエスト用メソッドをサブスクライブ
     }
 //
 //    func getLatestVoices() -> Promise<[String]> {
