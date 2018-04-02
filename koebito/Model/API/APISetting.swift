@@ -11,7 +11,7 @@ import Alamofire
 enum APISetting: API {
     
     /// get voices
-    case getVoicesWithKinds(kind: Int)
+    case getVoices(with: Int)
     case getVoicesOfSpecificUser(userId: String)
     
     /// get users
@@ -34,14 +34,14 @@ enum APISetting: API {
     
     var path: String {
         switch self {
-        case .getVoicesWithKinds, .getVoicesOfSpecificUser: return "/voices"
+        case .getVoices, .getVoicesOfSpecificUser: return "/voices"
         //case .chatPostMessage(text: _, channel: _, options: _): return "/chat.postMessage"
         }
     }
     
     var parameters: Parameters? {
         switch self {
-        case .getVoicesWithKinds(kind: let kind):
+        case .getVoices(with: let kind):
             let touples = [("kind", kind)]
             let params = Dictionary(uniqueKeysWithValues: touples)
             return params

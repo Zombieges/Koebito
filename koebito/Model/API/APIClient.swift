@@ -18,7 +18,7 @@ struct APIClient {
     func dataRequest(kind: Int) -> Observable<Any> {
         return Observable<Any>
             .create { (observer) -> Disposable in
-                let api = APISetting.getVoicesWithKinds(kind: kind)
+                let api = APISetting.getVoices(with: kind)
                 let response = self._dataRequest(api: api)
 //                    .flatMap{(res) in
 //                        APIClient.shared.getImages(res: res as Any)
