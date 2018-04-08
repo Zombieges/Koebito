@@ -18,7 +18,7 @@ class SoundListEachKindViewModel {
     var voices = [VoicesRespose]()
     
     func getVoices(kind: Int) {
-        let response = APIClient.shared.dataRequest(kind: kind)
+        let response = APIClient.shared.dataRequest(with: kind)
         _ = response.subscribe(
             onNext: { (res) in
                 print(res)

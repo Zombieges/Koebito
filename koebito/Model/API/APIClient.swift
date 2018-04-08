@@ -15,7 +15,7 @@ struct APIClient {
     static let shared = APIClient()
     //static let manager = Alamofire.SessionManager.default
     
-    func dataRequest(kind: Int) -> Observable<Any> {
+    func dataRequest(with kind: Int) -> Observable<Any> {
         return Observable<Any>
             .create { (observer) -> Disposable in
                 let api = APISetting.getVoices(with: kind)

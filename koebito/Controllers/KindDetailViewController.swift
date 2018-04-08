@@ -27,11 +27,11 @@ class KindDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let rawValue = self.kind?.rawValue else {
+        guard let kind = self.kind?.rawValue else {
             return
         }
         
-        let response = APIClient.shared.dataRequest(kind: rawValue)
+        let response = APIClient.shared.dataRequest(with: kind)
         _ = response.subscribe(
             onNext: { (res) in
                 print(res)
