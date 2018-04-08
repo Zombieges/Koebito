@@ -15,33 +15,22 @@ struct APIClient {
     static let shared = APIClient()
     //static let manager = Alamofire.SessionManager.default
 
-    func dataRequest(with kind: Int) -> Observable<Any> {
-        return Observable<Any>
+    func dataRequest(with kind: Int) -> Observable<VoicesRespose?> {
+        return Observable<VoicesRespose?>
             .create { (observer) -> Disposable in
                 let api = APISetting.getVoices(with: kind)
                 let response = self._dataRequest(api: api)
 //                    .flatMap{(res) in
 //                        APIClient.shared.getImages(res: res as Any)
 //                }
-                
+
                 _ = response.subscribe(
                     onNext: { (res) in
-                        do {
-                            let value = try? JSONDecoder().decode(VoicesRespose.self, from: res)
-                            //
-                            //                        let encoder = JSONEncoder()
-                            //                        encoder.outputFormatting = .prettyPrinted
-                            //let encoded = try! encoder.encode(value)
-                            print(value)
-                            
-                            // TODO モデルに突っ込む
-                            
-                            observer.on(.next(value))
-                            observer.onCompleted()
-                        } catch {
-                            // error.localizedDescription を上位側で確認
-                            observer.onError(error)
-                        }
+                        // json のエラーレスポンスをみてエラーハンドリング
+                        observer.on(.next(res))
+                        observer.onCompleted()
+                        // error.localizedDescription を上位側で確認
+                        //observer.onError(error)
                     },
                     onError: { (error) in
                         observer.onError(error)
@@ -53,33 +42,24 @@ struct APIClient {
     private func _dataRequest(method: HTTPMethod = .get,
                      api: API,
                      encoding: ParameterEncoding = URLEncoding.default,
-                     headers: [String: String]? = nil) -> Observable<Data> {
-        return Observable<Data>
+                     headers: [String: String]? = nil) -> Observable<VoicesRespose?> {
+        return Observable<VoicesRespose?>
             .create { (observer) -> Disposable in
                 let url = api.buildURL
-//                let dataRequest = Alamofire.request(url, method: method, parameters: api.parameters, encoding: encoding, headers: headers)
-//                debugPrint(dataRequest)
-//                // TODO: レスポンスデータログを出力
-//
-//                dataRequest.response {(response) in
-//                    guard let data = response.data else {
-//                        return
-//                    }
-//
-//                    observer.on(.next(data))
-//                    observer.onCompleted()
-//                }
                 let dataRequest = Alamofire.request(url, method: method, parameters: api.parameters, encoding: encoding, headers: headers).responseString { (response) in
                     switch response.result {
                     case .success(let value):
                         // TODO: ログ出力
-                        //print(value)
                         guard let data = value.data(using: .utf8) else {
                             return
                         }
-                        observer.on(.next(data))
-                        observer.onCompleted()
-
+                        do {
+                            let value = try? JSONDecoder().decode(VoicesRespose.self, from: data)
+                            observer.on(.next(value))
+                            observer.onCompleted()
+                        } catch {
+                            observer.onError(error)
+                        }
                     case .failure(let error):
                         observer.onError(error)
                     }

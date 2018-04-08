@@ -3,3 +3,4 @@ github "malcommac/Hydra" "1.2.1"
 github "Alamofire/Alamofire"
 github "ReactiveX/RxSwift" ~> 4.0
 github "onevcat/Kingfisher" ~> 3.13.1
+github "aws/aws-sdk-ios"

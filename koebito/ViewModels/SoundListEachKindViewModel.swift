@@ -22,7 +22,7 @@ class SoundListEachKindViewModel {
         _ = response.subscribe(
             onNext: { (res) in
                 print(res)
-                
+                // TODO: call getImagesAndSounds with res
         },
             onError: { (error) in
                 print(error)

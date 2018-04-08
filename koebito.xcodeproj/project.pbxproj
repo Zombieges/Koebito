@@ -111,6 +111,7 @@
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
 		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		9491ACDB2079F3B70098E71F /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		94991F9D1F230CBF001BED30 /* UserInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformations.swift; path = koebito/Model/UserInformations.swift; sourceTree = SOURCE_ROOT; };
 		94991F9F1F232C8E001BED30 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		94A89AD21FA6286A007E3E19 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
@@ -208,6 +209,7 @@
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9491ACDB2079F3B70098E71F /* AWSS3.framework */,
 				9419DA1E1F9DA17200DA2940 /* RxSwift.framework */,
 				94AFC2751F8893F300D99BE2 /* Alamofire.framework */,
 				941C92DF1F261DD200158DC4 /* Hydra.framework */,
@@ -832,6 +834,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -852,6 +855,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = koebito/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
