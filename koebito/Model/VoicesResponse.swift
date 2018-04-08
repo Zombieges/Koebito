@@ -18,7 +18,7 @@ struct VoicesRespose: Codable {
         let title: String
         let userId: String
         let userName: String
-        let imageUrl: String?
+        let imageUrl: String
         
         enum CodingKeys: String, CodingKey {
             case kind

@@ -14,7 +14,7 @@ struct APIClient {
 
     static let shared = APIClient()
     //static let manager = Alamofire.SessionManager.default
-    
+
     func dataRequest(with kind: Int) -> Observable<Any> {
         return Observable<Any>
             .create { (observer) -> Disposable in
@@ -26,13 +26,6 @@ struct APIClient {
                 
                 _ = response.subscribe(
                     onNext: { (res) in
-                        
-//                        guard let data = res.data else {
-//                            let error = res.error
-//                            observer.onError(error!)
-//                            return
-//                        }
-                        
                         do {
                             let value = try? JSONDecoder().decode(VoicesRespose.self, from: res)
                             //
