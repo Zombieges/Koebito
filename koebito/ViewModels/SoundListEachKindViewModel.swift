@@ -8,21 +8,27 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class SoundListEachKindViewModel {
-    enum Result {
-        case success(String)
-        case failure(String)
+    //var voices: Observable<[VoicesRespose]> = Observable.empty()
+    private var voice: Voice?
+    var voicesResponse: VoicesRespose? {
+        didSet {
+            self.reloadTableViewClosure?()
+        }
     }
-    
-    var voices = [VoicesRespose]()
-    
-    func getVoices(kind: Int) {
+    var reloadTableViewClosure: (()->())?
+    func getVoices(with kind: Int) {
         let response = APIClient.shared.dataRequest(with: kind)
         _ = response.subscribe(
-            onNext: { (res) in
+            onNext: { [weak self](res) in
+                guard let weakSelf = self else {
+                    return
+                }
                 print(res)
                 // TODO: call getImagesAndSounds with res
+                weakSelf.voicesResponse = res
         },
             onError: { (error) in
                 print(error)

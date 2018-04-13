@@ -1,11 +1,11 @@
 //
-//  Voices.swift
+//  Voice.swift
 //  koebito
 //
 //  Created by Kazuhiro Watanabe on 2017/10/30.
 //
 
-struct Voices: Codable {
+struct Voice: Codable {
 
     let ownerId: String?
     let ownerName: String?

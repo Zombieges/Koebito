@@ -8,7 +8,7 @@
 
 import UIKit
 //import Hydra
-import Firebase
+//import Firebase
 import RxSwift
 
 class KindDetailViewController: UIViewController {
@@ -18,30 +18,40 @@ class KindDetailViewController: UIViewController {
     private let soundListEachKindViewModel = SoundListEachKindViewModel()
     
     var kind: Kinds?
-    let DBRef = Database.database().reference()
+    //let DBRef = Database.database().reference()
     //let STRef = Storage.storage().reference(forURL: "gs://~~~~")
-    let STRef = Storage.storage().reference()
+    //let STRef = Storage.storage().reference()
     //typealias UsersResponse = [[String : AnyObject]]
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initVM()
         guard let kind = self.kind?.rawValue else {
             return
         }
-        
-        let response = APIClient.shared.dataRequest(with: kind)
-        _ = response.subscribe(
-            onNext: { (res) in
-                print(res)
-                
-        },
-            onError: { (error) in
-                print(error)
-        })
-        
+        soundListEachKindViewModel.getVoices(with: kind)
+//        let response = APIClient.shared.dataRequest(with: kind)
+//        _ = response.subscribe(
+//            onNext: { (res) in
+//                print(res)
+//                self.SoundListEachKindTableView.voices = res?.voices
+//                self.SoundListEachKindTableView.reloadData()
+//        },
+//            onError: { (error) in
+//                print(error)
+ //       })
+
         // TODO: soundListEachKindViewModel のリクエスト用メソッドをサブスクライブ
+    }
+    
+    func initVM() {
+        soundListEachKindViewModel.reloadTableViewClosure = { [weak self] in
+            guard let weakSelf = self else {
+                return
+            }
+            weakSelf.SoundListEachKindTableView.reloadData()
+        }
     }
 //
 //    func getLatestVoices() -> Promise<[String]> {

@@ -21,3 +21,10 @@ protocol API {
     /// Parameters with request (e.g. token=xoxp-xxx)
     var parameters: [String: Any]? { get }
 }
+
+enum APIError: String, Error {
+    case noNetwork = "No Network"
+    case serverOverload = "Server is overloaded"
+    case permissionDenied = "You don't have permission"
+}
+

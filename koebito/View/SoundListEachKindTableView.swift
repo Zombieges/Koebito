@@ -10,13 +10,20 @@ import UIKit
 
 class SoundListEachKindTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     private let viewModel = APIClient()
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        delegate = self
+        dataSource = self
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let newCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userListTableCell", for: indexPath)
         //newCell.textLabel?.text = items[indexPath.row]
-        return newCell;
+        return cell;
     }
 }

@@ -9,9 +9,9 @@
 struct VoicesRespose: Codable {
     let error: Bool
     let message: String
-    let voices: [Voices]
+    let voices: [Voice]
     
-    struct Voices: Codable {
+    struct Voice: Codable {
         let kind: Int
         let ownerId: String
         let soundUrl: String
