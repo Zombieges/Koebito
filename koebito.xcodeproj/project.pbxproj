@@ -29,11 +29,12 @@
 		94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */; };
 		94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */; };
 		94358AB91F1C7FF600A07E9C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB81F1C7FF600A07E9C /* Const.swift */; };
+		949389E62082551500805400 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949389E52082551500805400 /* AWSS3.framework */; };
+		949389E820825FFB00805400 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949389E720825FFB00805400 /* Kingfisher.framework */; };
 		94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94991F9D1F230CBF001BED30 /* UserInformations.swift */; };
 		94A89AD31FA6286A007E3E19 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A89AD21FA6286A007E3E19 /* APIProtocol.swift */; };
 		94A89AD91FA633DC007E3E19 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A89AD81FA633DC007E3E19 /* APIClient.swift */; };
 		94A89ADD1FA63441007E3E19 /* APISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A89ADC1FA63441007E3E19 /* APISetting.swift */; };
-		94A89AE41FA772CC007E3E19 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A89AE31FA772CC007E3E19 /* Voice.swift */; };
 		94AFC2761F8893F300D99BE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AFC2751F8893F300D99BE2 /* Alamofire.framework */; };
 		94AFC2771F8893F300D99BE2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94AFC2751F8893F300D99BE2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */; };
@@ -111,12 +112,13 @@
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
 		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		949389E52082551500805400 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = Carthage/Build/iOS/AWSS3.framework; sourceTree = "<group>"; };
+		949389E720825FFB00805400 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		94991F9D1F230CBF001BED30 /* UserInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformations.swift; path = koebito/Model/UserInformations.swift; sourceTree = SOURCE_ROOT; };
 		94991F9F1F232C8E001BED30 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		94A89AD21FA6286A007E3E19 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		94A89AD81FA633DC007E3E19 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		94A89ADC1FA63441007E3E19 /* APISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISetting.swift; sourceTree = "<group>"; };
-		94A89AE31FA772CC007E3E19 /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
 		94AFC2751F8893F300D99BE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
 		94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949389E820825FFB00805400 /* Kingfisher.framework in Frameworks */,
+				949389E62082551500805400 /* AWSS3.framework in Frameworks */,
 				94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */,
 				941C92E01F261DD200158DC4 /* Hydra.framework in Frameworks */,
 				9419DA1F1F9DA17200DA2940 /* RxSwift.framework in Frameworks */,
@@ -208,6 +212,8 @@
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				949389E720825FFB00805400 /* Kingfisher.framework */,
+				949389E52082551500805400 /* AWSS3.framework */,
 				9419DA1E1F9DA17200DA2940 /* RxSwift.framework */,
 				94AFC2751F8893F300D99BE2 /* Alamofire.framework */,
 				941C92DF1F261DD200158DC4 /* Hydra.framework */,
@@ -226,7 +232,6 @@
 				94C194A21FF9F9000052C879 /* API */,
 				94991F9D1F230CBF001BED30 /* UserInformations.swift */,
 				9419DA1C1F9AECAA00DA2940 /* VoicesResponse.swift */,
-				94A89AE31FA772CC007E3E19 /* Voice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,7 +672,6 @@
 				94A89ADD1FA63441007E3E19 /* APISetting.swift in Sources */,
 				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
 				940DC2A21F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift in Sources */,
-				94A89AE41FA772CC007E3E19 /* Voice.swift in Sources */,
 				94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */,
 				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,
 				94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */,
