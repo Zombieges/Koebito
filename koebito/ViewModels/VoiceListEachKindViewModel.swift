@@ -1,5 +1,5 @@
 //
-//  SoundListEachKindViewModel.swift
+//  VoiceListEachKindViewModel.swift
 //  koebito
 //
 //  Created by Kazuhiro Watanabe on 2018/01/05.
@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import AWSS3
 
-class SoundListEachKindViewModel {
+class VoiceListEachKindViewModel {
     let transferManager = AWSS3TransferManager.default()
     private var voiceList = [VoiceListCellViewModel]() {
         didSet {

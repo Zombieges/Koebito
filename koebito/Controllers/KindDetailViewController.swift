@@ -13,7 +13,7 @@ import Kingfisher
 class KindDetailViewController: UIViewController {
     
     @IBOutlet weak var SoundListEachKindTableView: UITableView!
-    private let soundListEachKindViewModel = SoundListEachKindViewModel()
+    private let voiceListEachKindViewModel = VoiceListEachKindViewModel()
 
     var kind: Kinds?
     let disposeBag = DisposeBag()
@@ -24,11 +24,11 @@ class KindDetailViewController: UIViewController {
         guard let kind = self.kind?.rawValue else {
             return
         }
-        soundListEachKindViewModel.getVoices(with: kind)
+        voiceListEachKindViewModel.getVoices(with: kind)
     }
 
     func initVM() {
-        soundListEachKindViewModel.reloadTableViewClosure = { [weak self] in
+        voiceListEachKindViewModel.reloadTableViewClosure = { [weak self] in
             guard let weakSelf = self else {
                 return
             }
@@ -40,13 +40,13 @@ class KindDetailViewController: UIViewController {
 extension KindDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return soundListEachKindViewModel.getNumberOfCells()
+        return voiceListEachKindViewModel.getNumberOfCells()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "voiceListTableCell", for: indexPath) as! VoiceListCell
         
-        let cellVM = soundListEachKindViewModel.getVoiceCellViewModel(at: indexPath)
+        let cellVM = voiceListEachKindViewModel.getVoiceCellViewModel(at: indexPath)
         cell.ownerImage.kf.setImage(with: cellVM.ownerImageUrl)
         cell.ownerName.text = cellVM.ownerName
         cell.voiceTitle.text = cellVM.voiceTitle

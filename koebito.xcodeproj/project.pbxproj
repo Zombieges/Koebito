@@ -42,7 +42,7 @@
 		94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */; };
 		94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */; };
 		94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE190E1F3DAD0E002EABF4 /* images.xcassets */; };
-		94C194AB1FFFC86F0052C879 /* SoundListEachKindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C194AA1FFFC86F0052C879 /* SoundListEachKindViewModel.swift */; };
+		94C194AB1FFFC86F0052C879 /* VoiceListEachKindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C194AA1FFFC86F0052C879 /* VoiceListEachKindViewModel.swift */; };
 		94F812E41FB3525500280842 /* TaskConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F812E31FB3525500280842 /* TaskConstant.swift */; };
 		94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D601F1B7B61000A73FC /* AppDelegate.swift */; };
 		94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D621F1B7B61000A73FC /* KindsViewController.swift */; };
@@ -126,7 +126,7 @@
 		94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
 		94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		94BE190E1F3DAD0E002EABF4 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		94C194AA1FFFC86F0052C879 /* SoundListEachKindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundListEachKindViewModel.swift; sourceTree = "<group>"; };
+		94C194AA1FFFC86F0052C879 /* VoiceListEachKindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceListEachKindViewModel.swift; sourceTree = "<group>"; };
 		94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94F812E31FB3525500280842 /* TaskConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskConstant.swift; sourceTree = "<group>"; };
 		94FE1D5D1F1B7B61000A73FC /* koebito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koebito.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9419DA221F9DC54600DA2940 /* KindsViewModel.swift */,
-				94C194AA1FFFC86F0052C879 /* SoundListEachKindViewModel.swift */,
+				94C194AA1FFFC86F0052C879 /* VoiceListEachKindViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -694,7 +694,7 @@
 				94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */,
 				94A89AD31FA6286A007E3E19 /* APIProtocol.swift in Sources */,
 				940DC2521F3F5164007A8876 /* SoundsListTableView.swift in Sources */,
-				94C194AB1FFFC86F0052C879 /* SoundListEachKindViewModel.swift in Sources */,
+				94C194AB1FFFC86F0052C879 /* VoiceListEachKindViewModel.swift in Sources */,
 				94A89AD91FA633DC007E3E19 /* APIClient.swift in Sources */,
 				9419DA1D1F9AECAA00DA2940 /* VoicesResponse.swift in Sources */,
 				94287CD52083787F0098241E /* VoiceListCell.swift in Sources */,
