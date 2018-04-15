@@ -14,23 +14,12 @@ import Kingfisher
 
 class SoundListEachKindViewModel {
     let transferManager = AWSS3TransferManager.default()
-    private var voiceList = [VoicesRespose.Voice]() {
+    private var voiceList = [VoiceListCellViewModel]() {
         didSet {
             self.reloadTableViewClosure?()
         }
     }
     var reloadTableViewClosure: (()->())?
-//    private func setVoices(voices: [VoicesRespose.Voice]) {
-//        var voiceVms = [Voice]()
-//        for voice in voices {
-//            voiceVms.append(Voice(ownerId: voice.ownerId,
-//                                  ownerName: voice.userName,
-//                                  title: voice.title,
-//                                  kind: voice.kind,
-//                                  voiceUrl: voice.soundUrl,
-//                                  ownerImageUrl: voice.ownerImageUrl))
-//        }
-//    }
     func getVoices(with kind: Int) {
         let response = APIClient.shared.dataRequest(with: kind)
         _ = response.subscribe(
@@ -39,41 +28,58 @@ class SoundListEachKindViewModel {
                     return
                 }
                 print(res)
-                // getImage()
-                weakSelf.voiceList = res.voices
-
-                let downloadingFileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("default.png")
-                
-                let downloadRequest = AWSS3TransferManagerDownloadRequest()
-                
-                downloadRequest?.bucket = "koebito/images"
-                downloadRequest?.key = "default.png"
-                downloadRequest?.downloadingFileURL = downloadingFileURL
-                weakSelf.transferManager.download(downloadRequest!).continueWith(executor: AWSExecutor.mainThread(), block: { (task:AWSTask<AnyObject>) -> Any? in
-                    
-                    if let error = task.error as? NSError {
-                        if error.domain == AWSS3TransferManagerErrorDomain, let code = AWSS3TransferManagerErrorType(rawValue: error.code) {
-                            switch code {
-                            case .cancelled, .paused:
-                                break
-                            default:
-                                print("Error downloading: \(downloadRequest?.key) Error: \(error)")
-                            }
-                        } else {
-                            print("Error downloading: \(downloadRequest?.key) Error: \(error)")
-                        }
-                        return nil
+                var vms = [VoiceListCellViewModel]()
+                for voice in res.voices {
+                    let imageUrl = URL(string: voice.imageUrl)!
+                    ImageDownloader.default.downloadImage(with: imageUrl, options: [], progressBlock: nil) {
+                        (image, error, url, data) in
+                        print("Downloaded Image: \(image)")
+                        vms.append(VoiceListCellViewModel(ownerImage: image!,
+                                                                         ownerName: voice.userName,
+                                                                         voiceTitle: voice.title,
+                                                                         voiceUrl: voice.soundUrl))
                     }
-                    print("Download complete for: \(downloadRequest?.key)")
-                    let downloadOutput = task.result
-                    return nil
-                })
+                }
+                weakSelf.voiceList = vms
+//                let downloadingFileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("default.png")
+//
+//                let downloadRequest = AWSS3TransferManagerDownloadRequest()!
+//
+//                downloadRequest.bucket = "koebito/images"
+//                downloadRequest.key = "default.png"
+//                downloadRequest.downloadingFileURL = downloadingFileURL
+//                weakSelf.transferManager.download(downloadRequest).continueWith(executor: AWSExecutor.mainThread(), block: { (task:AWSTask<AnyObject>) -> Any? in
+//
+//                    if let error = task.error as NSError? {
+//                        if error.domain == AWSS3TransferManagerErrorDomain, let code = AWSS3TransferManagerErrorType(rawValue: error.code) {
+//                            switch code {
+//                            case .cancelled, .paused:
+//                                break
+//                            default:
+//                                print("Error downloading: \(String(describing: downloadRequest.key)) Error: \(error)")
+//                            }
+//                        } else {
+//                            print("Error downloading: \(String(describing: downloadRequest.key)) Error: \(error)")
+//                        }
+//                        return nil
+//                    }
+//                    print("Download complete for: \(String(describing: downloadRequest.key))")
+//                    let _ = task.result
+//                    return nil
+//                })
         },
             onError: { (error) in
                 print(error)
         })
     }
-    func getVoiceCellViewModel(at indexPath: IndexPath) -> VoicesRespose.Voice {
+    func getVoiceCellViewModel(at indexPath: IndexPath) -> VoiceListCellViewModel {
         return voiceList[indexPath.row]
     }
+}
+
+struct VoiceListCellViewModel {
+    let ownerImage: UIImage
+    let ownerName: String
+    let voiceTitle: String
+    let voiceUrl: String
 }
