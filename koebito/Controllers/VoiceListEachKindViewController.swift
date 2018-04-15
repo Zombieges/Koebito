@@ -12,7 +12,7 @@ import Kingfisher
 
 class VoiceListEachKindViewController: UIViewController {
     
-    @IBOutlet weak var SoundListEachKindTableView: UITableView!
+    @IBOutlet weak var VoiceListTableView: UITableView!
     private let voiceListEachKindViewModel = VoiceListEachKindViewModel()
 
     var kind: Kinds?
@@ -32,7 +32,7 @@ class VoiceListEachKindViewController: UIViewController {
             guard let weakSelf = self else {
                 return
             }
-            weakSelf.SoundListEachKindTableView.reloadData()
+            weakSelf.VoiceListTableView.reloadData()
         }
     }
 }
