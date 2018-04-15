@@ -12,7 +12,6 @@ import RxCocoa
 
 class KindsViewController: UIViewController {
 
-    final private let viewModel = KindsViewModel()
     @IBOutlet weak var kindsDetailCollectionView: UICollectionView!
     var images: [Kinds] = []
 
