@@ -25,6 +25,7 @@
 		94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */; };
 		94221A8D1F3F23F100DA0FE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94221A8B1F3F23F100DA0FE2 /* Main.storyboard */; };
 		94287CD02082F56A0098241E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94287CCF2082F5690098241E /* AWSCore.framework */; };
+		94287CD52083787F0098241E /* VoiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94287CD42083787F0098241E /* VoiceListCell.swift */; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
 		94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */; };
@@ -41,7 +42,6 @@
 		94BE19051F3D8BEB002EABF4 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */; };
 		94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */; };
 		94BE190F1F3DAD0E002EABF4 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE190E1F3DAD0E002EABF4 /* images.xcassets */; };
-		94C194A91FFFC59A0052C879 /* SoundListEachKindTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C194A81FFFC59A0052C879 /* SoundListEachKindTableView.swift */; };
 		94C194AB1FFFC86F0052C879 /* SoundListEachKindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C194AA1FFFC86F0052C879 /* SoundListEachKindViewModel.swift */; };
 		94F812E41FB3525500280842 /* TaskConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F812E31FB3525500280842 /* TaskConstant.swift */; };
 		94FE1D611F1B7B61000A73FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE1D601F1B7B61000A73FC /* AppDelegate.swift */; };
@@ -110,6 +110,7 @@
 		94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NibInstantiatable+Extension.swift"; path = "koebito/Extension/NibInstantiatable+Extension.swift"; sourceTree = "<group>"; };
 		94221A8C1F3F23F100DA0FE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = koebito/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94287CCF2082F5690098241E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Carthage/Build/iOS/AWSCore.framework; sourceTree = "<group>"; };
+		94287CD42083787F0098241E /* VoiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceListCell.swift; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		94BE19041F3D8BEB002EABF4 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
 		94BE19061F3D8C9C002EABF4 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		94BE190E1F3DAD0E002EABF4 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		94C194A81FFFC59A0052C879 /* SoundListEachKindTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundListEachKindTableView.swift; sourceTree = "<group>"; };
 		94C194AA1FFFC86F0052C879 /* SoundListEachKindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundListEachKindViewModel.swift; sourceTree = "<group>"; };
 		94EC58DCA073174237C34F38 /* Pods-koebitoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koebitoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-koebitoUITests/Pods-koebitoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94F812E31FB3525500280842 /* TaskConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskConstant.swift; sourceTree = "<group>"; };
@@ -210,6 +210,13 @@
 				940DC2AD1F401ADF007A8876 /* AddSound.swift */,
 			);
 			path = MySoundSourcesView;
+			sourceTree = "<group>";
+		};
+		94287CD1208338B30098241E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
@@ -309,6 +316,7 @@
 		94FE1D5F1F1B7B61000A73FC /* koebito */ = {
 			isa = PBXGroup;
 			children = (
+				94287CD1208338B30098241E /* Service */,
 				94F812E21FB351FB00280842 /* Constant */,
 				94A89AE11FA64960007E3E19 /* ViewModels */,
 				94A89AD11FA62845007E3E19 /* Protocols */,
@@ -352,7 +360,7 @@
 				94FE1D991F1B8AAD000A73FC /* KindCollectionViewCell.swift */,
 				94221A821F3EEEF900DA0FE2 /* MySoundSourcesView */,
 				94FE1D931F1B8991000A73FC /* KindCollectionViewCell.xib */,
-				94C194A81FFFC59A0052C879 /* SoundListEachKindTableView.swift */,
+				94287CD42083787F0098241E /* VoiceListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -689,6 +697,7 @@
 				94C194AB1FFFC86F0052C879 /* SoundListEachKindViewModel.swift in Sources */,
 				94A89AD91FA633DC007E3E19 /* APIClient.swift in Sources */,
 				9419DA1D1F9AECAA00DA2940 /* VoicesResponse.swift in Sources */,
+				94287CD52083787F0098241E /* VoiceListCell.swift in Sources */,
 				94F812E41FB3525500280842 /* TaskConstant.swift in Sources */,
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
@@ -699,7 +708,6 @@
 				94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */,
 				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,
 				94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */,
-				94C194A91FFFC59A0052C879 /* SoundListEachKindTableView.swift in Sources */,
 				94358AB91F1C7FF600A07E9C /* Const.swift in Sources */,
 				940DC2541F3F5A6B007A8876 /* UITableView+Extension.swift in Sources */,
 				940DC2A61F3F709B007A8876 /* NSObject+Extension.swift in Sources */,

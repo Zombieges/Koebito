@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import Kingfisher
 
 class KindDetailViewController: UIViewController {
     
-    @IBOutlet weak var SoundListEachKindTableView: SoundListEachKindTableView!
+    @IBOutlet weak var SoundListEachKindTableView: UITableView!
     private let soundListEachKindViewModel = SoundListEachKindViewModel()
 
     var kind: Kinds?
@@ -36,3 +37,20 @@ class KindDetailViewController: UIViewController {
     }
 }
 
+extension KindDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return soundListEachKindViewModel.getNumberOfCells()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "voiceListTableCell", for: indexPath) as! VoiceListCell
+        
+        let cellVM = soundListEachKindViewModel.getVoiceCellViewModel(at: indexPath)
+        cell.ownerImage.kf.setImage(with: cellVM.ownerImageUrl)
+        cell.ownerName.text = cellVM.ownerName
+        cell.voiceTitle.text = cellVM.voiceTitle
+        
+        return cell
+    }
+}

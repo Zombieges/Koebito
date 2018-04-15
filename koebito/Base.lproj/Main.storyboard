@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-VV-lin" userLabel="Sound List Each Kind Table View" customClass="SoundListEachKindTableView" customModule="koebito" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-VV-lin" userLabel="Sound List Each Kind Table View">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,19 +102,23 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ownerImageView" destination="Qcv-Qc-GGH" id="b1f-ai-J4Q"/>
+                                            <outlet property="ownerImage" destination="Qcv-Qc-GGH" id="L1c-kQ-3yp"/>
                                             <outlet property="ownerName" destination="Ju7-8C-QCd" id="BWd-ZN-82R"/>
                                             <outlet property="voiceTitle" destination="iZD-ON-gMC" id="cB5-TX-Nfx"/>
                                             <outlet property="voiceUrl" destination="Rai-HY-FHY" id="XfK-YV-Pth"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pDL-If-mZd" id="pSW-k3-wGu"/>
+                                    <outlet property="delegate" destination="pDL-If-mZd" id="ws0-qW-0Ct"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="SoundListEachKindTableView" destination="9PV-VV-lin" id="mXk-dK-CZO"/>
+                        <outlet property="SoundListEachKindTableView" destination="9PV-VV-lin" id="3d6-ok-kqC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYd-ev-xNh" userLabel="First Responder" sceneMemberID="firstResponder"/>

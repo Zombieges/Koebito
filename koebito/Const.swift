@@ -62,3 +62,23 @@ enum Kinds: Int, EnumEnumerable {
         return UIImage(named: KindName)
     }
 }
+
+enum SerialQueue: String {
+    case kingFisherTaskQueue
+
+    private static var pool = [String: DispatchGroup]()
+    var queue: DispatchQueue {
+        return DispatchQueue(label: label)
+    }
+    var group: DispatchGroup {
+        if let group = SerialQueue.pool[self.rawValue] {
+            return group
+        }
+        let group = DispatchGroup()
+        SerialQueue.pool[self.rawValue] = group
+        return group
+    }
+    private var label: String {
+        return rawValue
+    }
+}
