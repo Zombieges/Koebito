@@ -20,7 +20,7 @@ final class AddSound: UIView, NibInstantiatable {
         addGestureRecognizer(tap)
     }
     
-    func addsoundTapHunbler() {
+    @objc func addsoundTapHunbler() {
         // TODo: nabe 音楽登録画面へ遷移する
     }
 }

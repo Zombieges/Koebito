@@ -13,6 +13,7 @@ import AWSS3
 import Kingfisher
 
 class SoundListEachKindViewModel {
+    let transferManager = AWSS3TransferManager.default()
     private var voiceList = [VoicesRespose.Voice]() {
         didSet {
             self.reloadTableViewClosure?()
@@ -40,6 +41,33 @@ class SoundListEachKindViewModel {
                 print(res)
                 // getImage()
                 weakSelf.voiceList = res.voices
+
+                let downloadingFileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("default.png")
+                
+                let downloadRequest = AWSS3TransferManagerDownloadRequest()
+                
+                downloadRequest?.bucket = "koebito/images"
+                downloadRequest?.key = "default.png"
+                downloadRequest?.downloadingFileURL = downloadingFileURL
+                weakSelf.transferManager.download(downloadRequest!).continueWith(executor: AWSExecutor.mainThread(), block: { (task:AWSTask<AnyObject>) -> Any? in
+                    
+                    if let error = task.error as? NSError {
+                        if error.domain == AWSS3TransferManagerErrorDomain, let code = AWSS3TransferManagerErrorType(rawValue: error.code) {
+                            switch code {
+                            case .cancelled, .paused:
+                                break
+                            default:
+                                print("Error downloading: \(downloadRequest?.key) Error: \(error)")
+                            }
+                        } else {
+                            print("Error downloading: \(downloadRequest?.key) Error: \(error)")
+                        }
+                        return nil
+                    }
+                    print("Download complete for: \(downloadRequest?.key)")
+                    let downloadOutput = task.result
+                    return nil
+                })
         },
             onError: { (error) in
                 print(error)

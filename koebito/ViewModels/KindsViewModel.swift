@@ -12,8 +12,6 @@ import RxSwift
 class KindsViewModel {
     
     // call API client
-    
-    
 //    enum TriggerType {
 //        case refresh, loadMore
 //    }

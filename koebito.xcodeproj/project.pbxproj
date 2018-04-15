@@ -24,6 +24,7 @@
 		941C92E11F261DD200158DC4 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 941C92DF1F261DD200158DC4 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94221A7D1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */; };
 		94221A8D1F3F23F100DA0FE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94221A8B1F3F23F100DA0FE2 /* Main.storyboard */; };
+		94287CD02082F56A0098241E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94287CCF2082F5690098241E /* AWSCore.framework */; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
 		94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94358AB51F1C51AB00A07E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */; };
@@ -108,6 +109,7 @@
 		941C92DF1F261DD200158DC4 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		94221A7C1F3EA41E00DA0FE2 /* NibInstantiatable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NibInstantiatable+Extension.swift"; path = "koebito/Extension/NibInstantiatable+Extension.swift"; sourceTree = "<group>"; };
 		94221A8C1F3F23F100DA0FE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = koebito/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94287CCF2082F5690098241E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Carthage/Build/iOS/AWSCore.framework; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		94358AB41F1C51AB00A07E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94287CD02082F56A0098241E /* AWSCore.framework in Frameworks */,
 				949389E820825FFB00805400 /* Kingfisher.framework in Frameworks */,
 				949389E62082551500805400 /* AWSS3.framework in Frameworks */,
 				94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */,
@@ -212,6 +215,7 @@
 		94358A921F1BD0C100A07E9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94287CCF2082F5690098241E /* AWSCore.framework */,
 				949389E720825FFB00805400 /* Kingfisher.framework */,
 				949389E52082551500805400 /* AWSS3.framework */,
 				9419DA1E1F9DA17200DA2940 /* RxSwift.framework */,
@@ -380,6 +384,7 @@
 				94358A8E1F1BD0AC00A07E9C /* Embed Frameworks */,
 				CEF491BE7F8AB98E29128065 /* [CP] Embed Pods Frameworks */,
 				196E9026A9920B23E7F4B197 /* [CP] Copy Pods Resources */,
+				94287CCE2082F38B0098241E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -444,17 +449,20 @@
 					94FE1D5C1F1B7B61000A73FC = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HK27Y6U39D;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					94FE1D721F1B7B62000A73FC = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HK27Y6U39D;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 94FE1D5C1F1B7B61000A73FC;
 					};
 					94FE1D7D1F1B7B62000A73FC = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HK27Y6U39D;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 94FE1D5C1F1B7B61000A73FC;
 					};
@@ -573,6 +581,22 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		94287CCE2082F38B0098241E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AWSS3.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AWSCore.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		9EF78AE29DBAB24D3C3821EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -844,7 +868,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -865,7 +890,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -880,7 +906,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito.koebitoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koebito.app/koebito";
 			};
 			name = Debug;
@@ -896,7 +923,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito.koebitoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koebito.app/koebito";
 			};
 			name = Release;
@@ -911,7 +939,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito.koebitoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = koebito;
 			};
 			name = Debug;
@@ -926,7 +955,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zombieges.koebito.koebitoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = koebito;
 			};
 			name = Release;
