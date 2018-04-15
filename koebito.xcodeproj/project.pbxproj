@@ -27,7 +27,7 @@
 		94287CD52083787F0098241E /* VoiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94287CD42083787F0098241E /* VoiceListCell.swift */; };
 		94358A901F1BD0BA00A07E9C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; };
 		94358A911F1BD0BA00A07E9C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */; };
+		94358AB71F1C7F8000A07E9C /* VoiceListEachKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB61F1C7F8000A07E9C /* VoiceListEachKindViewController.swift */; };
 		94358AB91F1C7FF600A07E9C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94358AB81F1C7FF600A07E9C /* Const.swift */; };
 		949389E62082551500805400 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949389E52082551500805400 /* AWSS3.framework */; };
 		949389E820825FFB00805400 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949389E720825FFB00805400 /* Kingfisher.framework */; };
@@ -109,7 +109,7 @@
 		94287CCF2082F5690098241E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Carthage/Build/iOS/AWSCore.framework; sourceTree = "<group>"; };
 		94287CD42083787F0098241E /* VoiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceListCell.swift; sourceTree = "<group>"; };
 		94358A8F1F1BD0BA00A07E9C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailViewController.swift; sourceTree = "<group>"; };
+		94358AB61F1C7F8000A07E9C /* VoiceListEachKindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceListEachKindViewController.swift; sourceTree = "<group>"; };
 		94358AB81F1C7FF600A07E9C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		949389E52082551500805400 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = Carthage/Build/iOS/AWSS3.framework; sourceTree = "<group>"; };
 		949389E720825FFB00805400 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				94FE1D621F1B7B61000A73FC /* KindsViewController.swift */,
-				94358AB61F1C7F8000A07E9C /* KindDetailViewController.swift */,
+				94358AB61F1C7F8000A07E9C /* VoiceListEachKindViewController.swift */,
 				94FE1D641F1B7B61000A73FC /* MySoundSourcesViewController.swift */,
 			);
 			path = Controllers;
@@ -695,7 +695,7 @@
 				94FE1D631F1B7B61000A73FC /* KindsViewController.swift in Sources */,
 				94991F9E1F230CBF001BED30 /* UserInformations.swift in Sources */,
 				94A89ADD1FA63441007E3E19 /* APISetting.swift in Sources */,
-				94358AB71F1C7F8000A07E9C /* KindDetailViewController.swift in Sources */,
+				94358AB71F1C7F8000A07E9C /* VoiceListEachKindViewController.swift in Sources */,
 				940DC2A21F3F6F2E007A8876 /* SoundsLiatTableViewCell.swift in Sources */,
 				94BE19071F3D8C9C002EABF4 /* ProfileImageView.swift in Sources */,
 				941AADCA1F2C71A500985924 /* EnumEnumerable+Extension.swift in Sources */,

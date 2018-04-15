@@ -39,7 +39,7 @@ class KindsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! KindDetailViewController
+        let vc = segue.destination as! VoiceListEachKindViewController
         vc.kind = sender as! Kinds?
     }
 }

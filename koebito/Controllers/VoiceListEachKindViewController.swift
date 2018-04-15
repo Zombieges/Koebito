@@ -1,5 +1,5 @@
 //
-//  KindDetailViewController.swift
+//  VoiceListEachKindViewController.swift
 //  koebito
 //
 //  Created by Kazuhiro Watanabe on 2017/07/17.
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import Kingfisher
 
-class KindDetailViewController: UIViewController {
+class VoiceListEachKindViewController: UIViewController {
     
     @IBOutlet weak var SoundListEachKindTableView: UITableView!
     private let voiceListEachKindViewModel = VoiceListEachKindViewModel()
@@ -37,7 +37,7 @@ class KindDetailViewController: UIViewController {
     }
 }
 
-extension KindDetailViewController: UITableViewDelegate, UITableViewDataSource {
+extension VoiceListEachKindViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return voiceListEachKindViewModel.getNumberOfCells()
