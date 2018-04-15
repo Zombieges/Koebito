@@ -13,7 +13,6 @@ import RxCocoa
 class KindsViewController: UIViewController {
 
     @IBOutlet weak var kindsDetailCollectionView: UICollectionView!
-    var images: [Kinds] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,6 @@ class KindsViewController: UIViewController {
         // collectionViewSetting
         let nib = UINib(nibName: "KindCollectionViewCell", bundle: nil)
         self.kindsDetailCollectionView.register(nib, forCellWithReuseIdentifier: "KindCellIdentifier")
-        
-        // get image's name from enum
-        images = Kinds.cases
         
     }
     

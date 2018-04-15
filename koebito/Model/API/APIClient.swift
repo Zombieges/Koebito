@@ -40,9 +40,9 @@ struct APIClient {
     }
     
     private func _dataRequest(method: HTTPMethod = .get,
-                     api: API,
-                     encoding: ParameterEncoding = URLEncoding.default,
-                     headers: [String: String]? = nil) -> Observable<VoicesRespose?> {
+                              api: API,
+                              encoding: ParameterEncoding = URLEncoding.default,
+                              headers: [String: String]? = nil) -> Observable<VoicesRespose?> {
         return Observable<VoicesRespose?>
             .create { (observer) -> Disposable in
                 let url = api.buildURL
@@ -67,23 +67,5 @@ struct APIClient {
                 debugPrint(dataRequest)
                 return Disposables.create()
             }
-    }
-    func getImages(res: Any) -> Observable<UIImage>  {
-        return Observable<UIImage>
-        .create { (observer) -> Disposable in
-            print(res)
-            // get Kind type
-            if let cellImage = Kinds.crying.image {
-    
-                observer.on(.next(cellImage))
-                observer.onCompleted()
-            }  else {
-                let error = NSError(domain: "サンプル", code: 0, userInfo: nil)
-                observer.onError(error)
-                
-            }
-            
-            return Disposables.create()
-        }
     }
 }

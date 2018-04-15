@@ -45,12 +45,11 @@ extension VoiceListEachKindViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "voiceListTableCell", for: indexPath) as! VoiceListCell
-        
+
         let cellVM = voiceListEachKindViewModel.getVoiceCellViewModel(at: indexPath)
         cell.ownerImage.kf.setImage(with: cellVM.ownerImageUrl)
         cell.ownerName.text = cellVM.ownerName
         cell.voiceTitle.text = cellVM.voiceTitle
-        
         return cell
     }
 }
